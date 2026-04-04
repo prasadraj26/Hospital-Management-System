@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "nurse001",
+    "userName": "Nurse Emily Davis",
+    "email": "nurse@hospital.com",
+    "password": "123456789",
+    "role": "nurse",
+    "phoneNumber": "+1-555-0201",
+    "dateOfBirth": "1990-03-10",
+    "gender": "female",
+    "department": "Emergency",
+    "experience": "8 years",
+    "qualification": "BSN, RN",
+    "address": {
+      "street": "789 Care Lane",
+      "city": "New York",
+      "state": "NY",
+      "zipCode": "10003"
+    },
+    "emergencyContact": {
+      "name": "Robert Davis",
+      "relationship": "Spouse",
+      "phoneNumber": "+1-555-0202"
+    }
+  },
+  {
+    "_id": "nurse002",
+    "userName": "Nurse Michael Brown",
+    "email": "michael.brown@hospital.com",
+    "password": "$2b$10$rQZ8K9mN2pL3sT4uV5wX6yA7bC8dE9fG0hI1jK2lM3nO4pQ5rS6tU7vW8xY9zA",
+    "role": "nurse",
+    "phoneNumber": "+1-555-0203",
+    "dateOfBirth": "1988-11-18",
+    "gender": "male",
+    "department": "ICU",
+    "experience": "10 years",
+    "qualification": "MSN, RN",
+    "address": {
+      "street": "321 Healing Ave",
+      "city": "New York",
+      "state": "NY",
+      "zipCode": "10004"
+    },
+    "emergencyContact": {
+      "name": "Lisa Brown",
+      "relationship": "Spouse",
+      "phoneNumber": "+1-555-0204"
+    }
+  }
+]

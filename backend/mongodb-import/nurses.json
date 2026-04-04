@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Nurse Emily Davis",
+    "email": "nurse@hospital.com",
+    "password": "$2b$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+    "phoneno": "+1-555-0201",
+    "dob": "1990-03-10T00:00:00.000Z",
+    "gender": "female",
+    "address": {
+      "city": "New York",
+      "state": "NY",
+      "street": "789 Care Lane"
+    },
+    "ward": "Emergency",
+    "department": null,
+    "role": "nurse"
+  },
+  {
+    "name": "Nurse Michael Brown",
+    "email": "michael.brown@hospital.com",
+    "password": "$2b$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+    "phoneno": "+1-555-0203",
+    "dob": "1988-11-18T00:00:00.000Z",
+    "gender": "male",
+    "address": {
+      "city": "New York",
+      "state": "NY",
+      "street": "321 Healing Ave"
+    },
+    "ward": "ICU",
+    "department": null,
+    "role": "nurse"
+  }
+]

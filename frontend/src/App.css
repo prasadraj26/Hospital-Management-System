@@ -1,0 +1,56 @@
+html{
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #faf5ff 0%, #ffffff 50%, #e0e7ff 100%);
+  min-height: 100vh;
+}
+
+section{
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+/* Purple Theme Custom Styles */
+.purple-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.purple-gradient-dark {
+  background: linear-gradient(135deg, #5a67d8 0%, #667eea 100%);
+}
+
+.purple-shadow {
+  box-shadow: 0 10px 25px rgba(147, 51, 234, 0.15);
+}
+
+.purple-glow {
+  box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
+}
+
+/* Animation for purple theme elements */
+@keyframes purplePulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(147, 51, 234, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(147, 51, 234, 0);
+  }
+}
+
+.purple-pulse {
+  animation: purplePulse 2s infinite;
+}

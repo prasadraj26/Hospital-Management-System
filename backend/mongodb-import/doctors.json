@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Dr. John Smith",
+    "doctorId": "DOC001",
+    "email": "doctor@hospital.com",
+    "phoneno": "+1-555-0101",
+    "dob": "1980-05-15T00:00:00.000Z",
+    "gender": "male",
+    "address": {
+      "city": "New York",
+      "state": "NY",
+      "street": "123 Medical Center Dr"
+    },
+    "password": "$2b$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+    "specialization": "Cardiology",
+    "role": "doctor"
+  },
+  {
+    "name": "Dr. Sarah Johnson",
+    "doctorId": "DOC002",
+    "email": "sarah.johnson@hospital.com",
+    "phoneno": "+1-555-0103",
+    "dob": "1985-08-22T00:00:00.000Z",
+    "gender": "female",
+    "address": {
+      "city": "New York",
+      "state": "NY",
+      "street": "456 Health Plaza"
+    },
+    "password": "$2b$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+    "specialization": "Neurology",
+    "role": "doctor"
+  }
+]
