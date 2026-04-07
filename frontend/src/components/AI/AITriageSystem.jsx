@@ -105,9 +105,9 @@ function AITriageSystem() {
       <div className="max-w-6xl mx-auto">
         <div className="bg-white rounded-xl shadow-2xl overflow-hidden">
           {/* Header */}
-          <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-6">
-            <h1 className="text-3xl font-bold mb-2">🤖 AI-Powered Patient Triage System</h1>
-            <p className="text-purple-100">Intelligent symptom analysis with 94%+ accuracy</p>
+          <div className="text-white p-6" style={{backgroundColor: 'rgb(71, 119, 181)'}}>
+            <h1 className="text-3xl font-bold mb-2">🤖 AI Triage System</h1>
+            <p style={{color: 'rgba(255, 255, 255, 0.9)'}}>Intelligent symptom analysis with 94%+ accuracy</p>
           </div>
 
           <div className="p-6">

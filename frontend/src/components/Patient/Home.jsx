@@ -183,87 +183,87 @@ function Home() {
 
                     <div className='flex gap-3 '>
                     
-                        <div className="w-[270px] h-[300px] border border-purple-200 rounded-lg bg-gradient-to-br from-purple-100 to-purple-200 shadow-lg flex justify-center">
+                        <div className="w-[270px] h-[300px] border rounded-lg bg-white shadow-lg flex justify-center" style={{borderColor: 'rgb(71, 119, 181)'}}>
                             <div className="flex flex-col items-center justify-center ">
-                                <img className="w-24 h-24 mb-3 rounded-full shadow-lg border-2 border-purple-300" src={human1} alt=""/>
-                                <h5 className="mb-1 text-xl font-medium text-purple-800">Dr.Rahul Singh</h5>
-                                <span className="text-sm text-purple-600">Surgeon</span>
+                                <img className="w-24 h-24 mb-3 rounded-full shadow-lg border-2" src={human1} alt="" style={{borderColor: 'rgb(71, 119, 181)'}}/>
+                                <h5 className="mb-1 text-xl font-medium" style={{color: 'rgb(71, 119, 181)'}}>Dr.Rahul Singh</h5>
+                                <span className="text-sm" style={{color: 'rgb(71, 119, 181)'}}>Surgeon</span>
                                 <div className="flex mt-4 md:mt-6">
-                                <a href="/appointment" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-gradient-to-r from-purple-500 to-purple-600 border border-purple-300 rounded-lg hover:from-purple-600 hover:to-purple-700 focus:ring-4 focus:outline-none focus:ring-purple-200 shadow-lg transition-all duration-200 ms-3">Book Appointment</a>
+                                <a href="/appointment" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white rounded-lg shadow-lg transition-all duration-200 ms-3" style={{backgroundColor: 'rgb(71, 119, 181)'}}>Book Appointment</a>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="w-[270px] h-[300px] bg-gradient-to-br from-purple-100 to-purple-200 border border-purple-200 rounded-lg shadow-lg flex justify-center">
+                        <div className="w-[270px] h-[300px] bg-white border rounded-lg shadow-lg flex justify-center" style={{borderColor: 'rgb(71, 119, 181)'}}>
                             <div className="flex flex-col items-center justify-center ">
                                 <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={doct1} alt=""/>
-                                <h5 className="mb-1 text-xl font-medium text-purple-800">Dr.Ramesh Chand</h5>
-                                <span className="text-sm text-purple-800">Surgeon</span>
+                                <h5 className="mb-1 text-xl font-medium" style={{color: 'rgb(71, 119, 181)'}}>Dr.Ramesh Chand</h5>
+                                <span className="text-sm" style={{color: 'rgb(71, 119, 181)'}}>Surgeon</span>
                                 <div className="flex mt-4 md:mt-6">
-                                <a href="/appointment" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-gradient-to-r from-purple-500 to-purple-600 border border-purple-300 rounded-lg hover:from-purple-600 hover:to-purple-700 focus:ring-4 focus:outline-none focus:ring-purple-200 shadow-lg transition-all duration-200 ms-3">Book Appointment</a>
+                                <a href="/appointment" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white rounded-lg shadow-lg transition-all duration-200 ms-3" style={{backgroundColor: 'rgb(71, 119, 181)'}}>Book Appointment</a>
                                 </div>
                             </div>
                         </div>
-                        <div className="w-[270px] h-[300px] bg-gradient-to-br from-purple-100 to-purple-200 border border-purple-200 rounded-lg shadow-lg flex justify-center">
+                        <div className="w-[270px] h-[300px] bg-white border rounded-lg shadow-lg flex justify-center" style={{borderColor: 'rgb(71, 119, 181)'}}>
                             <div className="flex flex-col items-center justify-center ">
                                 <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={doct3} alt=""/>
-                                <h5 className="mb-1 text-xl font-medium text-purple-800">Dr.Maxwell Honda</h5>
-                                <span className="text-sm text-purple-800">Surgeon</span>
+                                <h5 className="mb-1 text-xl font-medium" style={{color: 'rgb(71, 119, 181)'}}>Dr.Maxwell Honda</h5>
+                                <span className="text-sm" style={{color: 'rgb(71, 119, 181)'}}>Surgeon</span>
                                 <div className="flex mt-4 md:mt-6">
-                                <a href="/appointment" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-gradient-to-r from-purple-500 to-purple-600 border border-purple-300 rounded-lg hover:from-purple-600 hover:to-purple-700 focus:ring-4 focus:outline-none focus:ring-purple-200 shadow-lg transition-all duration-200 ms-3">Book Appointment</a>
+                                <a href="/appointment" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white rounded-lg shadow-lg transition-all duration-200 ms-3" style={{backgroundColor: 'rgb(71, 119, 181)'}}>Book Appointment</a>
                                 </div>
                             </div>
                         </div>
-                        <div className="w-[270px] h-[300px] bg-gradient-to-br from-purple-100 to-purple-200 border border-purple-200 rounded-lg shadow-lg flex justify-center">
+                        <div className="w-[270px] h-[300px] bg-white border rounded-lg shadow-lg flex justify-center" style={{borderColor: 'rgb(71, 119, 181)'}}>
                             <div className="flex flex-col items-center justify-center ">
                                 <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={human4} alt=""/>
-                                <h5 className="mb-1 text-xl font-medium text-purple-800">Dr.Selena Gomez</h5>
-                                <span className="text-sm text-purple-800">Surgeon</span>
+                                <h5 className="mb-1 text-xl font-medium" style={{color: 'rgb(71, 119, 181)'}}>Dr.Selena Gomez</h5>
+                                <span className="text-sm" style={{color: 'rgb(71, 119, 181)'}}>Surgeon</span>
                                 <div className="flex mt-4 md:mt-6">
-                                <a href="/appointment" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-gradient-to-r from-purple-500 to-purple-600 border border-purple-300 rounded-lg hover:from-purple-600 hover:to-purple-700 focus:ring-4 focus:outline-none focus:ring-purple-200 shadow-lg transition-all duration-200 ms-3">Book Appointment</a>
+                                <a href="/appointment" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white rounded-lg shadow-lg transition-all duration-200 ms-3" style={{backgroundColor: 'rgb(71, 119, 181)'}}>Book Appointment</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className='flex gap-3'>
-                        <div className="w-[270px] h-[300px] bg-gradient-to-br from-purple-100 to-purple-200 border border-purple-200 rounded-lg shadow-lg flex justify-center">
+                        <div className="w-[270px] h-[300px] bg-white border rounded-lg shadow-lg flex justify-center" style={{borderColor: 'rgb(71, 119, 181)'}}>
                             <div className="flex flex-col items-center justify-center ">
                                 <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={doct2} alt=""/>
-                                <h5 className="mb-1 text-xl font-medium text-purple-800">Dr.Victor Suresh</h5>
-                                <span className="text-sm text-purple-800">Surgeon</span>
+                                <h5 className="mb-1 text-xl font-medium" style={{color: 'rgb(71, 119, 181)'}}>Dr.Victor Suresh</h5>
+                                <span className="text-sm" style={{color: 'rgb(71, 119, 181)'}}>Surgeon</span>
                                 <div className="flex mt-4 md:mt-6">
-                                <a href="/appointment" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-gradient-to-r from-purple-500 to-purple-600 border border-purple-300 rounded-lg hover:from-purple-600 hover:to-purple-700 focus:ring-4 focus:outline-none focus:ring-purple-200 shadow-lg transition-all duration-200 ms-3">Book Appointment</a>
+                                <a href="/appointment" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white rounded-lg shadow-lg transition-all duration-200 ms-3" style={{backgroundColor: 'rgb(71, 119, 181)'}}>Book Appointment</a>
                                 </div>
                             </div>
                         </div>
-                        <div className="w-[270px] h-[300px] bg-gradient-to-br from-purple-100 to-purple-200 border border-purple-200 rounded-lg shadow-lg flex justify-center">
+                        <div className="w-[270px] h-[300px] bg-white border rounded-lg shadow-lg flex justify-center" style={{borderColor: 'rgb(71, 119, 181)'}}>
                             <div className="flex flex-col items-center justify-center ">
                                 <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={human6} alt=""/>
-                                <h5 className="mb-1 text-xl font-medium text-purple-800">Dr.Mahesh Dalla</h5>
-                                <span className="text-sm text-purple-800">Surgeon</span>
+                                <h5 className="mb-1 text-xl font-medium" style={{color: 'rgb(71, 119, 181)'}}>Dr.Mahesh Dalla</h5>
+                                <span className="text-sm" style={{color: 'rgb(71, 119, 181)'}}>Surgeon</span>
                                 <div className="flex mt-4 md:mt-6">
-                                <a href="/appointment" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-gradient-to-r from-purple-500 to-purple-600 border border-purple-300 rounded-lg hover:from-purple-600 hover:to-purple-700 focus:ring-4 focus:outline-none focus:ring-purple-200 shadow-lg transition-all duration-200 ms-3">Book Appointment</a>
+                                <a href="/appointment" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white rounded-lg shadow-lg transition-all duration-200 ms-3" style={{backgroundColor: 'rgb(71, 119, 181)'}}>Book Appointment</a>
                                 </div>
                             </div>
                         </div>
-                        <div className="w-[270px] h-[300px] bg-gradient-to-br from-purple-100 to-purple-200 border border-purple-200 rounded-lg shadow-lg flex justify-center">
+                        <div className="w-[270px] h-[300px] bg-white border rounded-lg shadow-lg flex justify-center" style={{borderColor: 'rgb(71, 119, 181)'}}>
                             <div className="flex flex-col items-center justify-center ">
                                 <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={doct4} alt=""/>
-                                <h5 className="mb-1 text-xl font-medium text-purple-800">Dr.Sasuke Uchiha</h5>
-                                <span className="text-sm text-purple-800">Surgeon</span>
+                                <h5 className="mb-1 text-xl font-medium" style={{color: 'rgb(71, 119, 181)'}}>Dr.Sasuke Uchiha</h5>
+                                <span className="text-sm" style={{color: 'rgb(71, 119, 181)'}}>Surgeon</span>
                                 <div className="flex mt-4 md:mt-6">
-                                <a href="/appointment" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-gradient-to-r from-purple-500 to-purple-600 border border-purple-300 rounded-lg hover:from-purple-600 hover:to-purple-700 focus:ring-4 focus:outline-none focus:ring-purple-200 shadow-lg transition-all duration-200 ms-3">Book Appointment</a>
+                                <a href="/appointment" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white rounded-lg shadow-lg transition-all duration-200 ms-3" style={{backgroundColor: 'rgb(71, 119, 181)'}}>Book Appointment</a>
                                 </div>
                             </div>
                         </div>
-                        <div className="w-[270px] h-[300px] bg-gradient-to-br from-purple-100 to-purple-200 border border-purple-200 rounded-lg shadow-lg flex justify-center">
+                        <div className="w-[270px] h-[300px] bg-white border rounded-lg shadow-lg flex justify-center" style={{borderColor: 'rgb(71, 119, 181)'}}>
                             <div className="flex flex-col items-center justify-center ">
                                 <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={doct5} alt=""/>
-                                <h5 className="mb-1 text-xl font-medium text-purple-800">Dr.Miku Uzumaki</h5>
-                                <span className="text-sm text-purple-800">Surgeon</span>
+                                <h5 className="mb-1 text-xl font-medium" style={{color: 'rgb(71, 119, 181)'}}>Dr.Miku Uzumaki</h5>
+                                <span className="text-sm" style={{color: 'rgb(71, 119, 181)'}}>Surgeon</span>
                                 <div className="flex mt-4 md:mt-6">
                                     
-                                    <a href="/appointment" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-gradient-to-r from-purple-500 to-purple-600 border border-purple-300 rounded-lg hover:from-purple-600 hover:to-purple-700 focus:ring-4 focus:outline-none focus:ring-purple-200 shadow-lg transition-all duration-200 ms-3">Book Appointment</a>
+                                    <a href="/appointment" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white rounded-lg shadow-lg transition-all duration-200 ms-3" style={{backgroundColor: 'rgb(71, 119, 181)'}}>Book Appointment</a>
                                 </div>
                             </div>
                         </div>
@@ -285,8 +285,8 @@ function Home() {
                 transition={{ duration: 1.5 }}
                 whileInView={{ opacity: 1 }}
                  className='flex flex-col justify-center items-center'>
-                    <p className='text-3xl font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent'>Our Patients Feedback About Us</p>
-                    <p className='text-sm text-center text-purple-700'>A hospital is a healthcare institution providing patient treatment with specialized health science and auxiliary healthcare staff and medical equipment.</p>
+                    <p className='text-3xl font-semibold' style={{color: 'rgb(71, 119, 181)'}}>Our Patients Feedback About Us</p>
+                    <p className='text-sm text-center' style={{color: 'rgb(71, 119, 181)'}}>A hospital is a healthcare institution providing patient treatment with specialized health science and auxiliary healthcare staff and medical equipment.</p>
                 </motion.div>
                 <motion.div
                 ref={ref}
@@ -296,7 +296,7 @@ function Home() {
                 whileInView={{ opacity: 1 }}
                  className='flex items-center gap-4 '>
                     <img className='h-[300px] hidden md:block' src={feedback} alt="" />
-                    <div className='flex flex-col items-start py-5 p-5 w-[450px] shadow-xl bg-gradient-to-br from-purple-50 to-indigo-50 border border-purple-200 rounded-lg'>
+                    <div className='flex flex-col items-start py-5 p-5 w-[450px] shadow-xl bg-white border rounded-lg' style={{borderColor: 'rgb(71, 119, 181)'}}>
                         <div className='flex justify-center items-center'>
                             <img src={review} className='h-[90px] w-[110px] rounded-full' alt="profile" />
                             <div className='flex flex-col justify-center items-center ps-3'>

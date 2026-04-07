@@ -254,9 +254,9 @@ function IoTDeviceDashboard() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100 flex items-center justify-center">
+      <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 mx-auto mb-4" style={{borderBottomColor: 'rgb(71, 119, 181)'}}></div>
           <p className="text-gray-600">Loading IoT devices...</p>
         </div>
       </div>
@@ -264,13 +264,13 @@ function IoTDeviceDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100 p-6">
+    <div className="min-h-screen bg-white p-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="bg-white rounded-xl shadow-2xl overflow-hidden mb-6">
-          <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-6">
+          <div className="text-white p-6" style={{backgroundColor: 'rgb(71, 119, 181)'}}>
             <h1 className="text-3xl font-bold mb-2">🌐 IoT Device Dashboard</h1>
-            <p className="text-purple-100">Real-time monitoring of connected medical devices</p>
+            <p className="" style={{color: 'rgba(255, 255, 255, 0.9)'}}>Real-time monitoring of connected medical devices</p>
           </div>
         </div>
 

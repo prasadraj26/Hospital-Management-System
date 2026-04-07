@@ -79,7 +79,7 @@ function DoctorAuth() {
     <section
     
 
-        className='bg-gradient-to-br from-purple-50 to-indigo-50 h-screen w-screen'>
+        className='bg-white h-screen w-screen'>
         <motion.div
          ref={ref}
          initial={{ opacity: 0, x: -50 }} 
@@ -87,7 +87,7 @@ function DoctorAuth() {
          transition={{ duration: 1.5 }}
          whileInView={{ opacity: 1 }}
           className="flex items-center justify-center h-full max-w-7xl m-auto md:w-[60%] rounded-xl lg:w-[40%]  ">
-        <div className="xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md bg-gradient-to-br from-purple-100 to-indigo-100 shadow-xl shadow-purple-200  p-4 rounded-lg">
+        <div className="xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md bg-white shadow-xl p-4 rounded-lg" style={{borderColor: 'rgb(71, 119, 181)', borderWidth: '1px'}}>
           <h2 className="text-center text-2xl font-bold leading-tight text-black">
             Doctor SignIn
           </h2>
@@ -108,7 +108,7 @@ function DoctorAuth() {
                   {' '}
                   Email address{' '}
                 </label>
-                <div className="mt-2 flex justify-evenly items-center border-purple-300 border-2 rounded-lg">
+                <div className="mt-2 flex justify-evenly items-center border-2 rounded-lg" style={{borderColor: 'rgb(71, 119, 181)'}}>
                   <input
                     className="flex h-10 w-full rounded-md border  outline-none border-none bg-transparent px-3 py-2 text-sm placeholder:text-black  disabled:cursor-not-allowed disabled:opacity-50"
                     type="email"
@@ -128,7 +128,7 @@ function DoctorAuth() {
                   </label>
 
                 </div>
-                <div className="mt-2 flex justify-evenly items-center border-purple-300 border-2 rounded-lg">
+                <div className="mt-2 flex justify-evenly items-center border-2 rounded-lg" style={{borderColor: 'rgb(71, 119, 181)'}}>
                   <input
                     className="flex h-10 w-full rounded-md border  outline-none border-none bg-transparent px-3 py-2 text-sm placeholder:text-black  disabled:cursor-not-allowed disabled:opacity-50"
                     type={!isPassVisible ? "password":"text"}
@@ -147,7 +147,7 @@ function DoctorAuth() {
                 <button
                   type="button"
                   onClick={handleSubmit}
-                  className="inline-flex w-full items-center justify-center rounded-md bg-gradient-to-r from-purple-500 to-purple-600 px-3.5 py-2.5 font-semibold leading-7 text-white hover:from-purple-600 hover:to-purple-700 hover:scale-105 duration-300 active:scale-95 shadow-lg"
+                  className="inline-flex w-full items-center justify-center rounded-md px-3.5 py-2.5 font-semibold leading-7 text-white hover:scale-105 duration-300 active:scale-95 shadow-lg" style={{backgroundColor: 'rgb(71, 119, 181)'}}
                 >
                   Get started
                 </button>
