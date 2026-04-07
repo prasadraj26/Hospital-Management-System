@@ -20,29 +20,42 @@ function Footer() {
                         fill="rgb(71, 119, 181)"
                     />
                     </svg>
-                    <span className="ml-4 text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">HMS</span>
+                    <span className="ml-4 text-2xl font-bold text-[rgb(71,119,181)]">
+  HMS
+</span>
                 </div>
                 </a>
             </div>
             <div className="w-auto p-8">
                 <ul className="-m-5 flex flex-wrap items-center">
                 <li className="p-5">
-                    <a className="font-medium text-purple-600 hover:text-purple-700 transition-colors duration-200" href="/">
+                    <a 
+  className="font-medium text-[rgb(71,119,181)] hover:text-purple-700 transition-colors duration-200" 
+  href="/about-us"
+>
                     Privacy Policy
                     </a>
                 </li>
                 <li className="p-5">
-                    <a className="font-medium text-purple-600 hover:text-purple-700 transition-colors duration-200" href="/">
-                    Terms of Service
+                    <a 
+  className="font-medium text-[rgb(71,119,181)] hover:text-purple-700 transition-colors duration-200" 
+  href="/about-us"
+>                    Terms of Service
                     </a>
                 </li>
                 <li className="p-5">
-                    <a className="font-medium text-purple-600 hover:text-purple-700 transition-colors duration-200" href="/">
+                    <a 
+  className="font-medium text-[rgb(71,119,181)] hover:text-purple-700 transition-colors duration-200" 
+  href="/contact-us"
+>
                     Return Policy
                     </a>
                 </li>
                 <li className="p-5">
-                    <a className="font-medium text-purple-600 hover:text-purple-700 transition-colors duration-200" href="/">
+                    <a 
+  className="font-medium text-[rgb(71,119,181)] hover:text-purple-700 transition-colors duration-200" 
+  href="/contact-us"
+>
                     Contact Us
                     </a>
                 </li>

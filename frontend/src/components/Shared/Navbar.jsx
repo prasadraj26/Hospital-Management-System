@@ -29,8 +29,10 @@ function Navbar() {
         <div className='flex max-w-7xl items-center justify-between m-auto h-full'>
             <div className='text-5xl font-bold' style={{color: 'rgb(71, 119, 181)'}}>HMS</div>
             <div className=' justify-center items-center gap-6 text-xl hidden md:flex'>
-                <NavLink style={navLinkStyle} to="/">Home</NavLink>
-                <NavLink style={navLinkStyle} to="/appointment">Appointment</NavLink>
+
+                <NavLink style={(props) => ({ ...navLinkStyle(props), color: 'rgb(71, 119, 181)' })} to="/">Home</NavLink>
+
+                <NavLink style={(props) => ({ ...navLinkStyle(props), color: 'rgb(71, 119, 181)' })} to="/appointment">Appointment</NavLink>
                 
                 {/* AI Services Dropdown */}
                 <div className="relative">
@@ -68,7 +70,8 @@ function Navbar() {
                 {/* Dashboards Dropdown */}
                 <div className="relative">
                     <button 
-                        className="flex items-center gap-1 text-xl hover:text-purple-700 transition-colors"
+                        className="flex items-center gap-1 text-xl transition-colors"
+                        style={{color: 'rgb(71, 119, 181)'}}
                         onClick={() => setShowServices(!showServices)}
                     >
                         Dashboards
@@ -89,11 +92,17 @@ function Navbar() {
                     )}
                 </div>
 
-                <NavLink style={navLinkStyle} to="/about-us">About Us</NavLink>
-                <NavLink style={navLinkStyle} to="/contact-us">Contact Us</NavLink>
-                <button className='bg-gradient-to-r from-purple-500 to-purple-600 text-white p-1 pe-2 ps-2 rounded-full hover:from-purple-600 hover:to-purple-700 hover:scale-110 duration-300 active:scale-90 shadow-lg' onClick={handleClick}>LogIn</button>
+                <NavLink style={(props) => ({ ...navLinkStyle(props), color: 'rgb(71, 119, 181)' })} to="/about-us">About Us</NavLink>
+
+                <NavLink style={(props) => ({ ...navLinkStyle(props), color: 'rgb(71, 119, 181)' })} to="/contact-us">Contact Us</NavLink>
+
+                <button className='bg-[rgb(71,119,181)] text-white p-1 pe-2 ps-2 rounded-full hover:bg-[rgb(60,100,160)] hover:scale-110 duration-300 active:scale-90 shadow-lg' onClick={handleClick}>
+                    LogIn
+                </button>
             </div>
+
             <svg  className={isMobNav?'size-10 md:hidden cursor-pointer z-50 text-white':'size-10 md:hidden cursor-pointer z-50'} onClick={handleNav} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path></svg>
+
             <div className={!isMobNav?'hidden':'flex flex-col absolute top-0 left-0 h-screen w-screen text-white text-xl justify-center items-center bg-gradient-to-br from-purple-600 to-indigo-600 md:hidden '}>
                 <NavLink className="py-6 text-3xl"  style={navLinkStyle} to="/">Home</NavLink>
                 <NavLink className="py-6 text-3xl" style={navLinkStyle} to="/appointment">Appointment</NavLink>
@@ -103,7 +112,6 @@ function Navbar() {
                 <NavLink className="py-6 text-3xl"  style={navLinkStyle} to="/about-us">About Us</NavLink>
                 <NavLink className="py-6 text-3xl"  style={navLinkStyle} to="/contact-us">Contact Us</NavLink>
                 <NavLink className="py-6 text-3xl"  style={navLinkStyle} to="/sign-in">SignIn</NavLink>
-                
             </div>
             
         </div>
@@ -111,4 +119,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default Navbar;

@@ -15,8 +15,7 @@ function AdminDashboard() {
   useEffect(() => {
     const fetchInfo = async (e) => {
       await axios
-        .get("http://localhost:4451/api/admin/get-count", {
-        })
+        .get("http://localhost:4451/api/admin/get-count", {})
         .then((res) => {
           setdocount(res.data.doccou);
           setnursecount(res.data.nursecou);
@@ -37,30 +36,100 @@ function AdminDashboard() {
 
   return (
     <section className="bg-white min-h-screen flex justify-center items-center">
-      <div className="h-[80%] w-[80%] bg-white shadow-xl p-2 flex rounded-xl" style={{borderColor: 'rgb(71, 119, 181)', borderWidth: '1px'}}>
-        <AdminSidebar userName={"Admin"} profiePic={profiePic}/>
+      <div
+        className="h-[80%] w-[80%] bg-white shadow-xl p-2 flex rounded-xl"
+        style={{ borderColor: "rgb(71,119,181)", borderWidth: "1px" }}
+      >
+        <AdminSidebar userName={"Admin"} profiePic={profiePic} />
         <div className=" w-[70%] ms-24 p-4 flex flex-col justify-around ">
-          <p className="font-semibold text-3xl text-center" style={{color: 'rgb(71, 119, 181)'}}>Dashboard</p>
-          <div className="w-full  h-[80%] items-center flex flex-col gap-4">
+          <p
+            className="font-semibold text-3xl text-center"
+            style={{ color: "rgb(71,119,181)" }}
+          >
+            Dashboard
+          </p>
+
+          <div className="w-full h-[80%] items-center flex flex-col gap-4">
+            
             <div className="flex w-full justify-evenly h-[30%]">
-              <div className="flex shadow-xl rounded-xl border-2 w-[30%] justify-center items-center transition-all duration-200" style={{borderColor: 'rgb(71, 119, 181)', backgroundColor: 'white'}}>
-                <span className="font-semibold text-xl" style={{color: 'rgb(71, 119, 181)'}}>Doctors: {docount}</span>
+              <div
+                className="flex shadow-xl rounded-xl border-2 w-[30%] justify-center items-center transition-all duration-200"
+                style={{
+                  borderColor: "rgb(71,119,181)",
+                  backgroundColor: "white",
+                }}
+              >
+                <span
+                  className="font-semibold text-xl"
+                  style={{ color: "rgb(71,119,181)" }}
+                >
+                  Doctors: {docount}
+                </span>
               </div>
-              <div className="flex shadow-xl rounded-xl border-2 w-[30%] justify-center items-center transition-all duration-200" style={{borderColor: 'rgb(71, 119, 181)', backgroundColor: 'white'}}>
-                <span className="font-semibold text-xl" style={{color: 'rgb(71, 119, 181)'}}>Nurses: {nursecount} </span>
+
+              <div
+                className="flex shadow-xl rounded-xl border-2 w-[30%] justify-center items-center transition-all duration-200"
+                style={{
+                  borderColor: "rgb(71,119,181)",
+                  backgroundColor: "white",
+                }}
+              >
+                <span
+                  className="font-semibold text-xl"
+                  style={{ color: "rgb(71,119,181)" }}
+                >
+                  Nurses: {nursecount}
+                </span>
               </div>
             </div>
-            <div className="flex w-full  justify-evenly h-[30%]">
-              <div className="flex shadow-xl rounded-xl border-2 w-[30%] justify-center items-center transition-all duration-200" style={{borderColor: 'rgb(71, 119, 181)', backgroundColor: 'white'}}>
-                <span className="font-semibold text-xl" style={{color: 'rgb(71, 119, 181)'}}>Patients: {patientcount}</span>
+
+            <div className="flex w-full justify-evenly h-[30%]">
+              <div
+                className="flex shadow-xl rounded-xl border-2 w-[30%] justify-center items-center transition-all duration-200"
+                style={{
+                  borderColor: "rgb(71,119,181)",
+                  backgroundColor: "white",
+                }}
+              >
+                <span
+                  className="font-semibold text-xl"
+                  style={{ color: "rgb(71,119,181)" }}
+                >
+                  Patients: {patientcount}
+                </span>
               </div>
-              <div className="flex  shadow-xl rounded-xl border-2 w-[30%] justify-center items-center transition-all duration-200" style={{borderColor: 'rgb(71, 119, 181)', backgroundColor: 'white'}}>
-                <span className="font-semibold text-xl" style={{color: 'rgb(71, 119, 181)'}}>Query: {querieslef} </span>
+
+              <div
+                className="flex shadow-xl rounded-xl border-2 w-[30%] justify-center items-center transition-all duration-200"
+                style={{
+                  borderColor: "rgb(71,119,181)",
+                  backgroundColor: "white",
+                }}
+              >
+                <span
+                  className="font-semibold text-xl"
+                  style={{ color: "rgb(71,119,181)" }}
+                >
+                  Query: {querieslef}
+                </span>
               </div>
             </div>
-            <div className="flex shadow-xl rounded-xl border-2 w-[30%] h-[30%] justify-center items-center transition-all duration-200" style={{borderColor: 'rgb(71, 119, 181)', backgroundColor: 'white'}}>
-              <span className="font-semibold text-xl" style={{color: 'rgb(71, 119, 181)'}}>Departments: {depts} </span>
+
+            <div
+              className="flex shadow-xl rounded-xl border-2 w-[30%] h-[30%] justify-center items-center transition-all duration-200"
+              style={{
+                borderColor: "rgb(71,119,181)",
+                backgroundColor: "white",
+              }}
+            >
+              <span
+                className="font-semibold text-xl"
+                style={{ color: "rgb(71,119,181)" }}
+              >
+                Departments: {depts}
+              </span>
             </div>
+
           </div>
         </div>
       </div>

@@ -68,7 +68,7 @@ function Home() {
                 whileInView={{ opacity: 1 }}
                 className='flex flex-col justify-center'> 
                     <p className='text-3xl font-semibold text-center' style={{color: 'rgb(71, 119, 181)'}}>The Power to Heal </p> 
-                    <p className='text-lg text-center text-purple-700'>To Undertake Specialized And holistic healthcare
+                    <p className='text-lg text-center' style={{color: 'rgb(71, 119, 181)'}}>To Undertake Specialized And holistic healthcare
                         services of world standard and to provide them to all sections....
                     </p>
                 </motion.div>
@@ -185,8 +185,8 @@ function Home() {
                     
                         <div className="w-[270px] h-[300px] border rounded-lg bg-white shadow-lg flex justify-center" style={{borderColor: 'rgb(71, 119, 181)'}}>
                             <div className="flex flex-col items-center justify-center ">
-                                <img className="w-24 h-24 mb-3 rounded-full shadow-lg border-2" src={human1} alt="" style={{borderColor: 'rgb(71, 119, 181)'}}/>
-                                <h5 className="mb-1 text-xl font-medium" style={{color: 'rgb(71, 119, 181)'}}>Dr.Rahul Singh</h5>
+                                <img className="w-24 h-24 mb-3 rounded-full shadow-lg border-2" src={human6} alt="" style={{borderColor: 'rgb(71, 119, 181)'}}/>
+                                <h5 className="mb-1 text-xl font-medium" style={{color: 'rgb(71, 119, 181)'}}>Dr.Ananth</h5>
                                 <span className="text-sm" style={{color: 'rgb(71, 119, 181)'}}>Surgeon</span>
                                 <div className="flex mt-4 md:mt-6">
                                 <a href="/appointment" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white rounded-lg shadow-lg transition-all duration-200 ms-3" style={{backgroundColor: 'rgb(71, 119, 181)'}}>Book Appointment</a>
@@ -196,8 +196,8 @@ function Home() {
 
                         <div className="w-[270px] h-[300px] bg-white border rounded-lg shadow-lg flex justify-center" style={{borderColor: 'rgb(71, 119, 181)'}}>
                             <div className="flex flex-col items-center justify-center ">
-                                <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={doct1} alt=""/>
-                                <h5 className="mb-1 text-xl font-medium" style={{color: 'rgb(71, 119, 181)'}}>Dr.Ramesh Chand</h5>
+                                <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={human6} alt=""/>
+                                <h5 className="mb-1 text-xl font-medium" style={{color: 'rgb(71, 119, 181)'}}>Dr.Balu</h5>
                                 <span className="text-sm" style={{color: 'rgb(71, 119, 181)'}}>Surgeon</span>
                                 <div className="flex mt-4 md:mt-6">
                                 <a href="/appointment" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white rounded-lg shadow-lg transition-all duration-200 ms-3" style={{backgroundColor: 'rgb(71, 119, 181)'}}>Book Appointment</a>
@@ -206,8 +206,8 @@ function Home() {
                         </div>
                         <div className="w-[270px] h-[300px] bg-white border rounded-lg shadow-lg flex justify-center" style={{borderColor: 'rgb(71, 119, 181)'}}>
                             <div className="flex flex-col items-center justify-center ">
-                                <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={doct3} alt=""/>
-                                <h5 className="mb-1 text-xl font-medium" style={{color: 'rgb(71, 119, 181)'}}>Dr.Maxwell Honda</h5>
+                                <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={human6} alt=""/>
+                                <h5 className="mb-1 text-xl font-medium" style={{color: 'rgb(71, 119, 181)'}}>Dr.Chitra</h5>
                                 <span className="text-sm" style={{color: 'rgb(71, 119, 181)'}}>Surgeon</span>
                                 <div className="flex mt-4 md:mt-6">
                                 <a href="/appointment" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white rounded-lg shadow-lg transition-all duration-200 ms-3" style={{backgroundColor: 'rgb(71, 119, 181)'}}>Book Appointment</a>
@@ -216,8 +216,8 @@ function Home() {
                         </div>
                         <div className="w-[270px] h-[300px] bg-white border rounded-lg shadow-lg flex justify-center" style={{borderColor: 'rgb(71, 119, 181)'}}>
                             <div className="flex flex-col items-center justify-center ">
-                                <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={human4} alt=""/>
-                                <h5 className="mb-1 text-xl font-medium" style={{color: 'rgb(71, 119, 181)'}}>Dr.Selena Gomez</h5>
+                                <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={human6} alt=""/>
+                                <h5 className="mb-1 text-xl font-medium" style={{color: 'rgb(71, 119, 181)'}}>Dr.Dhivya</h5>
                                 <span className="text-sm" style={{color: 'rgb(71, 119, 181)'}}>Surgeon</span>
                                 <div className="flex mt-4 md:mt-6">
                                 <a href="/appointment" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white rounded-lg shadow-lg transition-all duration-200 ms-3" style={{backgroundColor: 'rgb(71, 119, 181)'}}>Book Appointment</a>
@@ -228,8 +228,8 @@ function Home() {
                     <div className='flex gap-3'>
                         <div className="w-[270px] h-[300px] bg-white border rounded-lg shadow-lg flex justify-center" style={{borderColor: 'rgb(71, 119, 181)'}}>
                             <div className="flex flex-col items-center justify-center ">
-                                <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={doct2} alt=""/>
-                                <h5 className="mb-1 text-xl font-medium" style={{color: 'rgb(71, 119, 181)'}}>Dr.Victor Suresh</h5>
+                                <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={human6} alt=""/>
+                                <h5 className="mb-1 text-xl font-medium" style={{color: 'rgb(71, 119, 181)'}}>Dr.Emanual</h5>
                                 <span className="text-sm" style={{color: 'rgb(71, 119, 181)'}}>Surgeon</span>
                                 <div className="flex mt-4 md:mt-6">
                                 <a href="/appointment" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white rounded-lg shadow-lg transition-all duration-200 ms-3" style={{backgroundColor: 'rgb(71, 119, 181)'}}>Book Appointment</a>
@@ -239,7 +239,7 @@ function Home() {
                         <div className="w-[270px] h-[300px] bg-white border rounded-lg shadow-lg flex justify-center" style={{borderColor: 'rgb(71, 119, 181)'}}>
                             <div className="flex flex-col items-center justify-center ">
                                 <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={human6} alt=""/>
-                                <h5 className="mb-1 text-xl font-medium" style={{color: 'rgb(71, 119, 181)'}}>Dr.Mahesh Dalla</h5>
+                                <h5 className="mb-1 text-xl font-medium" style={{color: 'rgb(71, 119, 181)'}}>Dr.Fernandas</h5>
                                 <span className="text-sm" style={{color: 'rgb(71, 119, 181)'}}>Surgeon</span>
                                 <div className="flex mt-4 md:mt-6">
                                 <a href="/appointment" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white rounded-lg shadow-lg transition-all duration-200 ms-3" style={{backgroundColor: 'rgb(71, 119, 181)'}}>Book Appointment</a>
@@ -248,8 +248,8 @@ function Home() {
                         </div>
                         <div className="w-[270px] h-[300px] bg-white border rounded-lg shadow-lg flex justify-center" style={{borderColor: 'rgb(71, 119, 181)'}}>
                             <div className="flex flex-col items-center justify-center ">
-                                <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={doct4} alt=""/>
-                                <h5 className="mb-1 text-xl font-medium" style={{color: 'rgb(71, 119, 181)'}}>Dr.Sasuke Uchiha</h5>
+                                <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={human6} alt=""/>
+                                <h5 className="mb-1 text-xl font-medium" style={{color: 'rgb(71, 119, 181)'}}>Dr.Gopal</h5>
                                 <span className="text-sm" style={{color: 'rgb(71, 119, 181)'}}>Surgeon</span>
                                 <div className="flex mt-4 md:mt-6">
                                 <a href="/appointment" className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white rounded-lg shadow-lg transition-all duration-200 ms-3" style={{backgroundColor: 'rgb(71, 119, 181)'}}>Book Appointment</a>
@@ -258,8 +258,8 @@ function Home() {
                         </div>
                         <div className="w-[270px] h-[300px] bg-white border rounded-lg shadow-lg flex justify-center" style={{borderColor: 'rgb(71, 119, 181)'}}>
                             <div className="flex flex-col items-center justify-center ">
-                                <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={doct5} alt=""/>
-                                <h5 className="mb-1 text-xl font-medium" style={{color: 'rgb(71, 119, 181)'}}>Dr.Miku Uzumaki</h5>
+                                <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={human6} alt=""/>
+                                <h5 className="mb-1 text-xl font-medium" style={{color: 'rgb(71, 119, 181)'}}>Dr.Harini</h5>
                                 <span className="text-sm" style={{color: 'rgb(71, 119, 181)'}}>Surgeon</span>
                                 <div className="flex mt-4 md:mt-6">
                                     
@@ -298,9 +298,9 @@ function Home() {
                     <img className='h-[300px] hidden md:block' src={feedback} alt="" />
                     <div className='flex flex-col items-start py-5 p-5 w-[450px] shadow-xl bg-white border rounded-lg' style={{borderColor: 'rgb(71, 119, 181)'}}>
                         <div className='flex justify-center items-center'>
-                            <img src={review} className='h-[90px] w-[110px] rounded-full' alt="profile" />
+                            <img src={human6} className='h-[90px] w-[110px] rounded-full' alt="human6" />
                             <div className='flex flex-col justify-center items-center ps-3'>
-                                <p className='font-semibold'>Ms. Ariana Grande</p>
+                                <p className='font-semibold'>Ms. Shalini</p>
                                 <div className='flex '>
                                     <svg  className="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="orange"><path d="M11.9998 17L6.12197 20.5902L7.72007 13.8906L2.48926 9.40983L9.35479 8.85942L11.9998 2.5L14.6449 8.85942L21.5104 9.40983L16.2796 13.8906L17.8777 20.5902L11.9998 17Z"></path></svg>    
                                     <svg  className="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="orange"><path d="M11.9998 17L6.12197 20.5902L7.72007 13.8906L2.48926 9.40983L9.35479 8.85942L11.9998 2.5L14.6449 8.85942L21.5104 9.40983L16.2796 13.8906L17.8777 20.5902L11.9998 17Z"></path></svg>    
@@ -335,7 +335,7 @@ function Home() {
                  className="mx-auto max-w-7xl px-2 py-10 lg:px-0 z-10 ">
                             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                                 <div className="w-full md:w-2/3 lg:w-1/2">
-                                <h2 className="text-3xl font-bold text-purple-800">Sign up for our weekly newsletter</h2>
+                                <h2 className="text-3xl font-bold text-[rgb(71, 119, 181)]">Sign up for our weekly newsletter</h2>
                                 <p className="mt-4 text-gray-600">
                                 Be sure to check out and subscribe to the newsletters of HMS to stay updated about the developments in healthcare field.  
                                 </p>
@@ -369,8 +369,7 @@ function Home() {
                                     <button
                                         type="button"
                                         onClick={handleNewsletter}
-                                        className="w-full rounded-md bg-gradient-to-r from-purple-500 to-purple-600 px-3 py-2 text-sm font-semibold text-white shadow-lg hover:from-purple-600 hover:to-purple-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500 transition-all duration-200"
-                                    >
+className="w-full rounded-md bg-gradient-to-r from-[rgb(71,119,181)] to-[rgb(71,119,181)] px-3 py-2 text-sm font-semibold text-white shadow-lg hover:from-[rgb(71,119,181)] hover:to-[rgb(71,119,181)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[rgb(71,119,181)] transition-all duration-200"                                    >
                                         Subscribe
                                     </button>
                                     </div>

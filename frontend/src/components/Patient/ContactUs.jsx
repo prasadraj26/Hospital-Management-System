@@ -67,10 +67,10 @@ function ContactUs() {
             <span className="text-zinc-650 text-4xl">Locate Us</span>
             <br />
             <span className="text-zinc-550 text-2xl">
-              HMS Trivandrum - India
+              HMS TamilNadu - India
             </span>
             <span className="text-zinc-500 text-base">
-              HMS, RandomAddress, ExampleBlah, Trivandrum – XXXXXX, Kerala,
+              HMS, Salem, TamilNadu,
               India
             </span>
             <br />
@@ -152,7 +152,8 @@ function ContactUs() {
             <button
               onClick={handleSubmit}
               type="button"
-              className="rounded-md bg-gradient-to-r from-purple-500 to-purple-600 px-10 py-3 text-lg font-semibold text-white shadow-sm hover:from-purple-600 hover:to-purple-700 hover:scale-105 duration-300 active:scale-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600"
+                className="inline-flex w-[95%]  items-center justify-center lg:me-10 rounded-md bg-[rgb(71,119,181)] px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-[rgb(60,100,160)] hover:scale-105 duration-300 active:scale-95 shadow-lg"
+
             >
               Submit
             </button>

@@ -4,12 +4,13 @@ import { NavLink } from "react-router-dom";
 import {useDispatch} from 'react-redux';
 import { logout } from "../../../redux/UserSlice.js";
 import docProfile from "../../../assets/doct2.jpg";
+
 const DoctorSidebar = ({ profilePic, userName }) => {
   const navLinkStyle = ({ isActive }) => {
     return {
       fontWeight: isActive ? "600" : "400",
-      color: isActive ? "white" : "purple",
-      backgroundColor: isActive ? "rgb(71, 119, 181)" : "transparent",
+      color: isActive ? "white" : "rgb(71,119,181)",
+      backgroundColor: isActive ? "rgb(71,119,181)" : "transparent",
     };
   };
 
@@ -27,21 +28,29 @@ const DoctorSidebar = ({ profilePic, userName }) => {
   };
 
   return (
-    <div className='bg-gradient-to-b from-purple-100 to-indigo-100 h-full w-[18%] flex flex-col justify-between p-2 border-r border-purple-200'>
+    <div className='bg-gradient-to-b from-[rgb(71,119,181)]/10 to-[rgb(71,119,181)]/20 h-full w-[18%] flex flex-col justify-between p-2 border-r border-[rgb(71,119,181)]'>
+      
     <div className='flex flex-col gap-16'>
         <div className='w-full flex flex-col items-center gap-3'>
-            <img src={docProfile} className='size-24 rounded-full border-2 border-purple-300 shadow-lg' alt="profile" />
-            <p className='text-purple-800 font-medium'>{userName}</p>
+            <img src={docProfile} className='size-24 rounded-full border-2 border-[rgb(71,119,181)] shadow-lg' alt="profile" />
+            <p className='text-[rgb(71,119,181)] font-medium'>{userName}</p>
         </div>
+
         <div className='flex flex-col items-start w-full gap-4 '>
-            <NavLink style={navLinkStyle} className={'w-full  p-2 h-[40px] '} to="/doctor-profile">Settings</NavLink>
-            <NavLink style={navLinkStyle} className={'w-full  p-2 h-[40px] '} to="/doctor-appointments">Appointments</NavLink>
-            <NavLink style={navLinkStyle}  className={'w-full p-2 h-[40px] '} to="/doctor-review">Message</NavLink>
+            <NavLink style={navLinkStyle} className={'w-full p-2 h-[40px]'} to="/doctor-profile">Settings</NavLink>
+            <NavLink style={navLinkStyle} className={'w-full p-2 h-[40px]'} to="/doctor-appointments">Appointments</NavLink>
+            <NavLink style={navLinkStyle} className={'w-full p-2 h-[40px]'} to="/doctor-review">Message</NavLink>
         </div>
     </div>
-    <div className='w-full text-center  h-[80px] p-2'>
-        <button onClick={handleSignOut} className='bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-full text-md font-medium p-2 cursor-pointer hover:from-purple-600 hover:to-purple-700 hover:scale-110 duration-200 active:scale-90 shadow-lg'>Sign Out</button>
+
+    <div className='w-full text-center h-[80px] p-2'>
+        <button 
+          onClick={handleSignOut} 
+          className='bg-[rgb(71,119,181)] text-white rounded-full text-md font-medium p-2 cursor-pointer hover:bg-[rgb(60,100,160)] hover:scale-110 duration-200 active:scale-90 shadow-lg'>
+          Sign Out
+        </button>
     </div>
+
 </div>
   );
 };

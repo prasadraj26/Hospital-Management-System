@@ -183,7 +183,8 @@ function Appointment() {
                 </div>
               </div>
               <button
-                className="inline-flex w-[95%]  items-center justify-center lg:me-10 rounded-md bg-gradient-to-r from-purple-500 to-purple-600 px-3.5 py-2.5 font-semibold leading-7 text-white hover:from-purple-600 hover:to-purple-700 hover:scale-105 duration-300 active:scale-95 shadow-lg"
+                  className="inline-flex w-[95%]  items-center justify-center lg:me-10 rounded-md bg-[rgb(71,119,181)] px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-[rgb(60,100,160)] hover:scale-105 duration-300 active:scale-95 shadow-lg"
+
                 onClick={(e) => handleSubmit(e)}
               >
                 Submit
