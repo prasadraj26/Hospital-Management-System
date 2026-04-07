@@ -51,7 +51,7 @@ function Home() {
     }
 
   return (
-    <div className='bg-gradient-to-br from-purple-50 via-white to-indigo-50 min-h-screen'   >
+    <div className='bg-white min-h-screen'>
 
         <section 
         
@@ -67,7 +67,7 @@ function Home() {
                 transition={{ duration: 1.5 }}
                 whileInView={{ opacity: 1 }}
                 className='flex flex-col justify-center'> 
-                    <p className='text-3xl font-semibold text-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent'>The Power to Heal </p> 
+                    <p className='text-3xl font-semibold text-center' style={{color: 'rgb(71, 119, 181)'}}>The Power to Heal </p> 
                     <p className='text-lg text-center text-purple-700'>To Undertake Specialized And holistic healthcare
                         services of world standard and to provide them to all sections....
                     </p>
@@ -90,7 +90,7 @@ function Home() {
             <div 
         
         className='w-full h-full flex flex-col justify-center items-center'>
-                <p className='font-semibold text-3xl bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent'>Why Choose Us?</p>
+                <p className='font-semibold text-3xl' style={{color: 'rgb(71, 119, 181)'}}>Why Choose Us?</p>
                 <div className='flex flex-col md:flex-row justify-center  items-center'>
                     <div className=' w-[350px] h-[300px] md:h-[350px] flex flex-col  justify-evenly md:justify-between'>
                                 <motion.div  

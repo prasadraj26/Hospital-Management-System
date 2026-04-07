@@ -10,7 +10,7 @@ const AdminSidebar = ({ profilePic, userName }) => {
     return {
       fontWeight: isActive ? "600" : "400",
       color: isActive ? "white" : "purple",
-      backgroundColor: isActive ? "rgb(147, 51, 234)" : "transparent",
+      backgroundColor: isActive ? "rgb(71, 119, 181)" : "transparent",
     };
   };
 
@@ -82,8 +82,8 @@ const AdminSidebar = ({ profilePic, userName }) => {
           </NavLink>
           
           {/* Management Systems */}
-          <div className="w-full border-t border-purple-300 my-2"></div>
-          <div className="text-sm font-semibold text-purple-600 px-2 mb-2">Management Systems</div>
+          <div className="w-full border-t my-2" style={{borderTopColor: 'rgb(71, 119, 181)'}}></div>
+          <div className="text-sm font-semibold px-2 mb-2" style={{color: 'rgb(71, 119, 181)'}}>Management Systems</div>
           
           <NavLink
             style={navLinkStyle}
@@ -131,7 +131,7 @@ const AdminSidebar = ({ profilePic, userName }) => {
         <div className="w-full text-center  h-[80px] p-2">
           <button
             onClick={handleSignOut}
-            className="bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-full text-md font-medium p-2 cursor-pointer hover:from-purple-600 hover:to-purple-700 hover:scale-110 duration-200 active:scale-90 shadow-lg"
+            className="rounded-full text-md font-medium p-2 cursor-pointer hover:scale-110 duration-200 active:scale-90 shadow-lg text-white" style={{backgroundColor: 'rgb(71, 119, 181)'}}
           >
             Sign Out
           </button>

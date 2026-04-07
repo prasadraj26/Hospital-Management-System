@@ -140,16 +140,16 @@ function PurpleThemeDashboard() {
       {
         label: 'Total Appointments',
         data: analytics?.appointmentTrends?.map(trend => trend.count) || [],
-        borderColor: 'rgb(147, 51, 234)',
-        backgroundColor: 'rgba(147, 51, 234, 0.1)',
+        borderColor: 'rgb(71, 119, 181)',
+        backgroundColor: 'rgba(255, 255, 255, 0.5)',
         tension: 0.4,
         fill: true,
       },
       {
         label: 'Completed',
         data: analytics?.appointmentTrends?.map(trend => trend.completed) || [],
-        borderColor: 'rgb(79, 70, 229)',
-        backgroundColor: 'rgba(79, 70, 229, 0.1)',
+        borderColor: 'rgb(71, 119, 181)',
+        backgroundColor: 'rgba(255, 255, 255, 0.3)',
         tension: 0.4,
         fill: true,
       },
@@ -163,18 +163,18 @@ function PurpleThemeDashboard() {
         label: 'Appointments',
         data: analytics?.departmentStats?.map(dept => dept.appointments) || [],
         backgroundColor: [
-          'rgba(147, 51, 234, 0.8)',
-          'rgba(79, 70, 229, 0.8)',
-          'rgba(139, 92, 246, 0.8)',
-          'rgba(124, 58, 237, 0.8)',
-          'rgba(109, 40, 217, 0.8)',
+          'rgba(71, 119, 181, 0.8)',
+          'rgba(71, 119, 181, 0.7)',
+          'rgba(71, 119, 181, 0.6)',
+          'rgba(71, 119, 181, 0.5)',
+          'rgba(71, 119, 181, 0.4)',
         ],
         borderColor: [
-          'rgba(147, 51, 234, 1)',
-          'rgba(79, 70, 229, 1)',
-          'rgba(139, 92, 246, 1)',
-          'rgba(124, 58, 237, 1)',
-          'rgba(109, 40, 217, 1)',
+          'rgb(71, 119, 181)',
+          'rgb(71, 119, 181)',
+          'rgb(71, 119, 181)',
+          'rgb(71, 119, 181)',
+          'rgb(71, 119, 181)',
         ],
         borderWidth: 2,
       },
@@ -187,8 +187,8 @@ function PurpleThemeDashboard() {
       {
         label: 'Appointments',
         data: analytics?.doctorStats?.map(doctor => doctor.appointments) || [],
-        backgroundColor: 'rgba(147, 51, 234, 0.8)',
-        borderColor: 'rgba(147, 51, 234, 1)',
+        backgroundColor: 'rgba(71, 119, 181, 0.8)',
+        borderColor: 'rgb(71, 119, 181)',
         borderWidth: 2,
         borderRadius: 8,
         borderSkipped: false,
@@ -197,7 +197,7 @@ function PurpleThemeDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50">
+    <div className="min-h-screen bg-white p-6">
       <div className="max-w-7xl mx-auto p-6">
         {/* Header */}
         <div className="mb-8">
@@ -383,12 +383,12 @@ function PurpleThemeDashboard() {
                     y: {
                       beginAtZero: true,
                       grid: {
-                        color: 'rgba(147, 51, 234, 0.1)'
+                        color: 'rgba(71, 119, 181, 0.1)'
                       }
                     },
                     x: {
                       grid: {
-                        color: 'rgba(147, 51, 234, 0.1)'
+                        color: 'rgba(71, 119, 181, 0.1)'
                       }
                     }
                   }
@@ -422,12 +422,12 @@ function PurpleThemeDashboard() {
                   y: {
                     beginAtZero: true,
                     grid: {
-                      color: 'rgba(147, 51, 234, 0.1)'
+                      color: 'rgba(71, 119, 181, 0.1)'
                     }
                   },
                   x: {
                     grid: {
-                      color: 'rgba(147, 51, 234, 0.1)'
+                      color: 'rgba(71, 119, 181, 0.1)'
                     }
                   }
                 }

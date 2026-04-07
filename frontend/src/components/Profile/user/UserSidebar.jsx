@@ -9,7 +9,7 @@ const UserSidebar =({ profiePic  ,userName}) =>{
         return {
           fontWeight: isActive ? "600" : "400",
           color: isActive ? "white" : "purple",
-          backgroundColor: isActive ? "rgb(147, 51, 234)" : "transparent",
+          backgroundColor: isActive ? "rgb(71, 119, 181)" : "transparent",
         };
       };
 

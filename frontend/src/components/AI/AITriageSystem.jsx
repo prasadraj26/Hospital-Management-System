@@ -101,7 +101,7 @@ function AITriageSystem() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100 p-6">
+    <div className="min-h-screen bg-white p-6">
       <div className="max-w-6xl mx-auto">
         <div className="bg-white rounded-xl shadow-2xl overflow-hidden">
           {/* Header */}

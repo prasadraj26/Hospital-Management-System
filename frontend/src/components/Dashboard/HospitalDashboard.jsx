@@ -83,10 +83,10 @@ function HospitalDashboard() {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-screen bg-gradient-to-br from-purple-50 to-indigo-100">
+      <div className="flex justify-center items-center h-screen bg-white">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-purple-600 mx-auto mb-4"></div>
-          <p className="text-purple-600 text-lg font-medium">Loading Dashboard...</p>
+          <div className="animate-spin rounded-full h-16 w-16 border-b-4 mx-auto mb-4" style={{borderBottomColor: 'rgb(71, 119, 181)'}}></div>
+          <p className="text-lg font-medium" style={{color: 'rgb(71, 119, 181)'}}>Loading Dashboard...</p>
         </div>
       </div>
     );
@@ -98,16 +98,16 @@ function HospitalDashboard() {
       {
         label: 'Total Appointments',
         data: analytics?.appointmentTrends?.map(trend => trend.count) || [],
-        borderColor: 'rgb(147, 51, 234)',
-        backgroundColor: 'rgba(147, 51, 234, 0.1)',
+        borderColor: 'rgb(71, 119, 181)',
+        backgroundColor: 'rgba(255, 255, 255, 0.5)',
         tension: 0.4,
         fill: true,
       },
       {
         label: 'Completed',
         data: analytics?.appointmentTrends?.map(trend => trend.completed) || [],
-        borderColor: 'rgb(79, 70, 229)',
-        backgroundColor: 'rgba(79, 70, 229, 0.1)',
+        borderColor: 'rgb(71, 119, 181)',
+        backgroundColor: 'rgba(255, 255, 255, 0.3)',
         tension: 0.4,
         fill: true,
       },
@@ -121,18 +121,18 @@ function HospitalDashboard() {
         label: 'Appointments',
         data: analytics?.departmentStats?.map(dept => dept.appointments) || [],
         backgroundColor: [
-          'rgba(147, 51, 234, 0.8)',
-          'rgba(79, 70, 229, 0.8)',
-          'rgba(139, 92, 246, 0.8)',
-          'rgba(124, 58, 237, 0.8)',
-          'rgba(109, 40, 217, 0.8)',
+          'rgba(71, 119, 181, 0.8)',
+          'rgba(71, 119, 181, 0.7)',
+          'rgba(71, 119, 181, 0.6)',
+          'rgba(71, 119, 181, 0.5)',
+          'rgba(71, 119, 181, 0.4)',
         ],
         borderColor: [
-          'rgba(147, 51, 234, 1)',
-          'rgba(79, 70, 229, 1)',
-          'rgba(139, 92, 246, 1)',
-          'rgba(124, 58, 237, 1)',
-          'rgba(109, 40, 217, 1)',
+          'rgb(71, 119, 181)',
+          'rgb(71, 119, 181)',
+          'rgb(71, 119, 181)',
+          'rgb(71, 119, 181)',
+          'rgb(71, 119, 181)',
         ],
         borderWidth: 2,
       },
@@ -145,8 +145,8 @@ function HospitalDashboard() {
       {
         label: 'Appointments',
         data: analytics?.doctorStats?.map(doctor => doctor.appointments) || [],
-        backgroundColor: 'rgba(147, 51, 234, 0.8)',
-        borderColor: 'rgba(147, 51, 234, 1)',
+        backgroundColor: 'rgba(71, 119, 181, 0.8)',
+        borderColor: 'rgb(71, 119, 181)',
         borderWidth: 2,
         borderRadius: 8,
         borderSkipped: false,
@@ -155,29 +155,29 @@ function HospitalDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50 p-6">
+    <div className="min-h-screen bg-white p-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold" style={{color: 'rgb(71, 119, 181)'}}>
             Hospital Dashboard
           </h1>
-          <p className="text-purple-600 mt-2 text-lg">
+          <p className="mt-2 text-lg" style={{color: 'rgb(71, 119, 181)'}}>
             Welcome back, {currentUser?.name || 'User'}! Here's your hospital overview.
           </p>
         </div>
 
         {/* Real-time Status */}
         {realtimeMetrics && (
-          <div className="mb-6 p-6 bg-white rounded-xl shadow-lg border border-purple-100">
+          <div className="mb-6 p-6 bg-white rounded-xl shadow-lg border" style={{borderColor: 'rgb(71, 119, 181)'}}>
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-4">
-                <div className={`px-4 py-2 rounded-full ${getStatusBgColor(realtimeMetrics.systemStatus)}`}>
-                  <span className={`text-sm font-medium ${getStatusColor(realtimeMetrics.systemStatus)}`}>
+                <div className="px-4 py-2 rounded-full" style={{backgroundColor: 'rgba(71, 119, 181, 0.1)'}}>
+                  <span className="text-sm font-medium" style={{color: 'rgb(71, 119, 181)'}}>
                     System {realtimeMetrics.systemStatus}
                   </span>
                 </div>
-                <span className="text-sm text-purple-600">
+                <span className="text-sm" style={{color: 'rgb(71, 119, 181)'}}>
                   Last updated: {new Date(realtimeMetrics.currentTime).toLocaleTimeString()}
                 </span>
               </div>
@@ -205,13 +205,17 @@ function HospitalDashboard() {
                 onClick={() => setActiveTab(tab)}
                 className={`py-3 px-6 rounded-md font-medium text-sm transition-all duration-200 ${
                   activeTab === tab
-                    ? 'bg-purple-600 text-white shadow-lg'
-                    : 'text-purple-600 hover:bg-purple-50'
+                    ? 'text-white'
+                    : ''
                 }`}
+                style={{
+                  backgroundColor: activeTab === tab ? 'rgb(71, 119, 181)' : 'transparent',
+                  color: activeTab === tab ? 'white' : 'rgb(71, 119, 181)'
+                }}
               >
                 {tab.charAt(0).toUpperCase() + tab.slice(1)}
               </button>
-            ))}
+            ))}  
           </nav>
         </div>
 
@@ -220,10 +224,10 @@ function HospitalDashboard() {
           <div className="space-y-6">
             {/* Key Metrics Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-6 rounded-xl shadow-lg text-white">
+              <div className="bg-white p-6 rounded-xl shadow-lg text-white" style={{backgroundColor: 'rgb(71, 119, 181)'}}>
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-purple-100 text-sm font-medium">Total Patients</p>
+                    <p className="text-sm font-medium" style={{color: 'rgba(255, 255, 255, 0.9)'}}>Total Patients</p>
                     <p className="text-3xl font-bold mt-1">
                       {analytics?.overview?.totalPatients || 0}
                     </p>
@@ -236,10 +240,10 @@ function HospitalDashboard() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-indigo-500 to-indigo-600 p-6 rounded-xl shadow-lg text-white">
+              <div className="bg-white p-6 rounded-xl shadow-lg text-white" style={{backgroundColor: 'rgb(71, 119, 181)'}}>
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-indigo-100 text-sm font-medium">Total Appointments</p>
+                    <p className="text-sm font-medium" style={{color: 'rgba(255, 255, 255, 0.9)'}}>Total Appointments</p>
                     <p className="text-3xl font-bold mt-1">
                       {analytics?.overview?.totalAppointments || 0}
                     </p>
@@ -252,10 +256,10 @@ function HospitalDashboard() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-violet-500 to-violet-600 p-6 rounded-xl shadow-lg text-white">
+              <div className="bg-white p-6 rounded-xl shadow-lg text-white" style={{backgroundColor: 'rgb(71, 119, 181)'}}>
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-violet-100 text-sm font-medium">Revenue</p>
+                    <p className="text-sm font-medium" style={{color: 'rgba(255, 255, 255, 0.9)'}}>Revenue</p>
                     <p className="text-3xl font-bold mt-1">
                       ${analytics?.overview?.totalRevenue || 0}
                     </p>
@@ -268,10 +272,10 @@ function HospitalDashboard() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-fuchsia-500 to-fuchsia-600 p-6 rounded-xl shadow-lg text-white">
+              <div className="bg-white p-6 rounded-xl shadow-lg text-white" style={{backgroundColor: 'rgb(71, 119, 181)'}}>
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-fuchsia-100 text-sm font-medium">Emergency Cases</p>
+                    <p className="text-sm font-medium" style={{color: 'rgba(255, 255, 255, 0.9)'}}>Emergency Cases</p>
                     <p className="text-3xl font-bold mt-1">
                       {analytics?.overview?.emergencyCases || 0}
                     </p>
@@ -287,8 +291,8 @@ function HospitalDashboard() {
 
             {/* Charts Row */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-purple-100">
-                <h3 className="text-lg font-bold text-purple-800 mb-4">Appointment Trends</h3>
+              <div className="bg-white p-6 rounded-xl shadow-lg" style={{borderColor: 'rgb(71, 119, 181)', borderWidth: '1px'}}>
+                <h3 className="text-lg font-bold mb-4" style={{color: 'rgb(71, 119, 181)'}}>Appointment Trends</h3>
                 <Line data={appointmentTrendsData} options={{
                   responsive: true,
                   plugins: {
@@ -300,20 +304,20 @@ function HospitalDashboard() {
                     y: {
                       beginAtZero: true,
                       grid: {
-                        color: 'rgba(147, 51, 234, 0.1)'
+                        color: 'rgba(71, 119, 181, 0.1)'
                       }
                     },
                     x: {
                       grid: {
-                        color: 'rgba(147, 51, 234, 0.1)'
+                        color: 'rgba(71, 119, 181, 0.1)'
                       }
                     }
                   }
                 }} />
               </div>
 
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-purple-100">
-                <h3 className="text-lg font-bold text-purple-800 mb-4">Department Distribution</h3>
+              <div className="bg-white p-6 rounded-xl shadow-lg" style={{borderColor: 'rgb(71, 119, 181)', borderWidth: '1px'}}>
+                <h3 className="text-lg font-bold mb-4" style={{color: 'rgb(71, 119, 181)'}}>Department Distribution</h3>
                 <Doughnut data={departmentData} options={{
                   responsive: true,
                   plugins: {
@@ -326,8 +330,8 @@ function HospitalDashboard() {
             </div>
 
             {/* Doctor Performance */}
-            <div className="bg-white p-6 rounded-xl shadow-lg border border-purple-100">
-              <h3 className="text-lg font-bold text-purple-800 mb-4">Doctor Performance</h3>
+            <div className="bg-white p-6 rounded-xl shadow-lg" style={{borderColor: 'rgb(71, 119, 181)', borderWidth: '1px'}}>
+              <h3 className="text-lg font-bold mb-4" style={{color: 'rgb(71, 119, 181)'}}>Doctor Performance</h3>
               <Bar data={doctorPerformanceData} options={{
                 responsive: true,
                 plugins: {
@@ -339,12 +343,12 @@ function HospitalDashboard() {
                   y: {
                     beginAtZero: true,
                     grid: {
-                      color: 'rgba(147, 51, 234, 0.1)'
+                      color: 'rgba(71, 119, 181, 0.1)'
                     }
                   },
                   x: {
                     grid: {
-                      color: 'rgba(147, 51, 234, 0.1)'
+                      color: 'rgba(71, 119, 181, 0.1)'
                     }
                   }
                 }
@@ -380,7 +384,7 @@ function HospitalDashboard() {
               <div className="bg-white p-6 rounded-lg shadow">
                 <h3 className="text-lg font-medium text-gray-900 mb-4">Completion Rate</h3>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-purple-600 mb-2">
+                  <div className="text-4xl font-bold mb-2" style={{color: 'rgb(71, 119, 181)'}}>
                     {analytics?.overview ? 
                       Math.round((analytics.overview.completedAppointments / analytics.overview.totalAppointments) * 100) : 0}%
                   </div>
@@ -443,7 +447,7 @@ function HospitalDashboard() {
                 </div>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow border-l-4 border-purple-500">
+              <div className="bg-white p-6 rounded-lg shadow" style={{borderLeftColor: 'rgb(71, 119, 181)', borderLeftWidth: '4px'}}>
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm font-medium text-gray-600">Completed Today</p>
@@ -451,8 +455,8 @@ function HospitalDashboard() {
                       {realtimeMetrics.completedToday}
                     </p>
                   </div>
-                  <div className="p-2 bg-purple-100 rounded-lg">
-                    <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="p-2 rounded-lg" style={{backgroundColor: 'rgba(71, 119, 181, 0.1)'}}>
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{color: 'rgb(71, 119, 181)'}}>
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
@@ -468,7 +472,7 @@ function HospitalDashboard() {
             <div className="bg-white p-6 rounded-lg shadow">
               <h3 className="text-lg font-medium text-gray-900 mb-4">Generate Reports</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <button className="p-4 border-2 border-dashed border-gray-300 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-colors">
+                <button className="p-4 border-2 border-dashed border-gray-300 rounded-lg transition-colors" style={{"--hover-border-color": 'rgb(71, 119, 181)'}}>
                   <div className="text-center">
                     <svg className="mx-auto h-8 w-8 text-gray-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />

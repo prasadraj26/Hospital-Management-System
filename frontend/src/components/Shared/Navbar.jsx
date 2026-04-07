@@ -25,9 +25,9 @@ function Navbar() {
     
 
   return (
-    <div className='bg-gradient-to-r from-purple-100 to-indigo-100 h-[80px] w-full fixed z-20 border-b border-purple-200 shadow-lg'>
+    <div className='bg-white h-[80px] w-full fixed z-20 border-b shadow-lg' style={{borderBottomColor: 'rgb(71, 119, 181)'}}>
         <div className='flex max-w-7xl items-center justify-between m-auto h-full'>
-            <div className='text-5xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent'>HMS</div>
+            <div className='text-5xl font-bold' style={{color: 'rgb(71, 119, 181)'}}>HMS</div>
             <div className=' justify-center items-center gap-6 text-xl hidden md:flex'>
                 <NavLink style={navLinkStyle} to="/">Home</NavLink>
                 <NavLink style={navLinkStyle} to="/appointment">Appointment</NavLink>
@@ -35,7 +35,8 @@ function Navbar() {
                 {/* AI Services Dropdown */}
                 <div className="relative">
                     <button 
-                        className="flex items-center gap-1 text-xl hover:text-purple-700 transition-colors"
+                        className="flex items-center gap-1 text-xl transition-colors"
+                        style={{color: 'rgb(71, 119, 181)'}}
                         onClick={() => setShowAI(!showAI)}
                     >
                         AI Services
@@ -44,10 +45,11 @@ function Navbar() {
                         </svg>
                     </button>
                     {showAI && (
-                        <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-purple-200 py-2 z-50">
+                        <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-300 py-2 z-50"  style={{borderColor: 'rgb(71, 119, 181)'}}>
                             <NavLink 
                                 to="/ai-triage" 
-                                className="block px-4 py-2 text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors"
+                                className="block px-4 py-2 text-gray-700  transition-colors"
+                                style={{"--hover-bg": 'rgba(71, 119, 181, 0.1)'}}
                                 onClick={() => setShowAI(false)}
                             >
                                 AI Triage System
