@@ -293,23 +293,23 @@ function DoctorAppointmen() {
 
   const getStatusColor = (status) => {
     switch (status) {
-      case "scheduled": return "bg-blue-100 text-blue-800";
+      case "scheduled": return "bg-navy-100 text-navy-800";
       case "inProgress": return "bg-yellow-100 text-yellow-800";
       case "completed": return "bg-green-100 text-green-800";
       case "cancelled": return "bg-red-100 text-red-800";
-      case "rescheduled": return "bg-purple-100 text-purple-800";
+      case "rescheduled": return "bg-navy-100 text-navy-800";
       default: return "bg-gray-100 text-gray-800";
     }
   };
 
   if (loading) {
     return (
-      <section className="bg-slate-300 flex justify-center items-center min-h-screen">
-        <div className="h-[80%] w-[90%] max-w-6xl bg-white shadow-xl p-2 flex overflow-hidden">
+      <section className="bg-white flex justify-center items-center min-h-screen pt-20 pb-8">
+        <div className="w-[95%] max-w-6xl bg-white shadow-xl flex flex-col md:flex-row overflow-hidden rounded-xl border border-navy-100 min-h-[80vh]">
           <DoctorSidebar userName={currentUser?.name || "Doctor"} profiePic={profiePic} />
-          <div className="w-[70%] ms-4 md:ms-24 p-2 md:p-4 flex flex-col justify-center items-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
-            <p className="mt-4 text-lg">Loading appointments...</p>
+          <div className="w-full md:w-[75%] p-4 md:p-6 flex flex-col justify-center items-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-navy-700"></div>
+            <p className="mt-4 text-lg text-navy-700 font-medium">Loading appointments...</p>
           </div>
         </div>
       </section>
@@ -317,21 +317,21 @@ function DoctorAppointmen() {
   }
 
   return (
-    <section className="bg-slate-300 flex justify-center items-center min-h-screen">
-      <div className="h-[80%] w-[90%] max-w-6xl bg-white shadow-xl p-2 flex overflow-hidden">
+    <section className="bg-white flex justify-center items-center min-h-screen pt-20 pb-8">
+      <div className="w-[95%] max-w-6xl bg-white shadow-xl flex flex-col md:flex-row overflow-hidden rounded-xl border border-navy-100 min-h-[80vh]">
         <DoctorSidebar userName={currentUser?.name || "Doctor"} profiePic={profiePic} />
-        <div className="w-[70%] ms-4 md:ms-24 p-2 md:p-4 flex flex-col overflow-y-auto">
+        <div className="w-full md:w-[75%] p-4 md:p-6 flex flex-col overflow-y-auto">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
-            <h1 className="font-semibold text-2xl md:text-3xl">Appointment Management</h1>
+            <h1 className="font-semibold text-2xl md:text-3xl text-navy-700">Appointment Management</h1>
             <div className="text-sm text-gray-600">
               Total Appointments: {appointments.length}
             </div>
           </div>
 
           <div className="w-full">
-            <div className="relative overflow-auto shadow-md sm:rounded-lg">
-              <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <div className="relative overflow-auto shadow-md rounded-lg">
+              <table className="w-full text-sm text-left rtl:text-right text-gray-500">
+                <thead className="text-xs text-navy-700 uppercase bg-navy-50">
                   <tr>
                     <th scope="col" className="px-6 py-3">#</th>
                     <th scope="col" className="px-6 py-3">Patient Name</th>
@@ -344,7 +344,7 @@ function DoctorAppointmen() {
                 <tbody>
                   {appointments && Array.isArray(appointments) && appointments.length > 0 ? (
                     appointments.map((item, index) => (
-                      <tr key={item._id} className="bg-white border-b hover:bg-gray-50">
+                      <tr key={item._id} className="bg-white border-b hover:bg-navy-50/50">
                         <td className="px-6 py-4">{index + 1}</td>
                         <td className="px-6 py-4 font-medium text-gray-900">{item.patient}</td>
                         <td className="px-6 py-4">{item.appointmentDate}</td>
@@ -358,32 +358,32 @@ function DoctorAppointmen() {
                           <div className="flex flex-wrap gap-2">
                             <button
                               onClick={() => handleViewDetails(item._id)}
-                              className="bg-blue-500 hover:bg-blue-700 text-white text-xs px-3 py-1 rounded"
+                              className="bg-navy-700 hover:bg-navy-600 text-white text-xs px-3 py-1 rounded-lg"
                             >
                               View
                             </button>
                             <button
                               onClick={() => handleReschedule(item)}
-                              className="bg-yellow-500 hover:bg-yellow-700 text-white text-xs px-3 py-1 rounded"
+                              className="bg-yellow-500 hover:bg-yellow-600 text-white text-xs px-3 py-1 rounded-lg"
                             >
                               Reschedule
                             </button>
                             <button
                               onClick={() => handleNurseRequest(item)}
-                              className="bg-orange-500 hover:bg-orange-700 text-white text-xs px-3 py-1 rounded"
+                              className="bg-orange-500 hover:bg-orange-600 text-white text-xs px-3 py-1 rounded-lg"
                             >
                               Ask Nurse
                             </button>
                             <button
                               onClick={() => handlePrescription(item)}
-                              className="bg-green-500 hover:bg-green-700 text-white text-xs px-3 py-1 rounded"
+                              className="bg-green-600 hover:bg-green-700 text-white text-xs px-3 py-1 rounded-lg"
                             >
                               Prescribe
                             </button>
                             {item.status === "scheduled" && (
                               <button
                                 onClick={() => handleStatusUpdate(item._id, "inProgress")}
-                                className="bg-purple-500 hover:bg-purple-700 text-white text-xs px-3 py-1 rounded"
+                                className="bg-navy-700 hover:bg-navy-600 text-white text-xs px-3 py-1 rounded-lg"
                               >
                                 Start
                               </button>

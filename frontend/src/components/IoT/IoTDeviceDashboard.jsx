@@ -283,7 +283,7 @@ function IoTDeviceDashboard() {
                 <select
                   value={filterStatus}
                   onChange={(e) => setFilterStatus(e.target.value)}
-                  className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                 >
                   <option value="all">All Status</option>
                   <option value="online">Online</option>
@@ -298,7 +298,7 @@ function IoTDeviceDashboard() {
                 <select
                   value={filterType}
                   onChange={(e) => setFilterType(e.target.value)}
-                  className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                 >
                   <option value="all">All Types</option>
                   {deviceTypes.map(type => (
@@ -310,7 +310,7 @@ function IoTDeviceDashboard() {
             
             <button
               onClick={() => setShowAddDevice(true)}
-              className="px-6 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-200"
+              className="px-6 py-2 bg-navy-700 hover:bg-navy-600 text-white font-semibold rounded-lg shadow-md transition-all duration-200"
             >
               + Add Device
             </button>
@@ -398,7 +398,7 @@ function IoTDeviceDashboard() {
                         type="text"
                         value={newDevice.deviceName}
                         onChange={(e) => setNewDevice({...newDevice, deviceName: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                         required
                       />
                     </div>
@@ -408,7 +408,7 @@ function IoTDeviceDashboard() {
                       <select
                         value={newDevice.deviceType}
                         onChange={(e) => setNewDevice({...newDevice, deviceType: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                         required
                       >
                         <option value="">Select Type</option>
@@ -424,7 +424,7 @@ function IoTDeviceDashboard() {
                         type="text"
                         value={newDevice.manufacturer}
                         onChange={(e) => setNewDevice({...newDevice, manufacturer: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                       />
                     </div>
                     
@@ -434,7 +434,7 @@ function IoTDeviceDashboard() {
                         type="text"
                         value={newDevice.model}
                         onChange={(e) => setNewDevice({...newDevice, model: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                       />
                     </div>
                     
@@ -444,7 +444,7 @@ function IoTDeviceDashboard() {
                         type="text"
                         value={newDevice.serialNumber}
                         onChange={(e) => setNewDevice({...newDevice, serialNumber: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                       />
                     </div>
                     
@@ -454,7 +454,7 @@ function IoTDeviceDashboard() {
                         type="text"
                         value={newDevice.macAddress}
                         onChange={(e) => setNewDevice({...newDevice, macAddress: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                       />
                     </div>
                     
@@ -464,7 +464,7 @@ function IoTDeviceDashboard() {
                         type="text"
                         value={newDevice.ipAddress}
                         onChange={(e) => setNewDevice({...newDevice, ipAddress: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                       />
                     </div>
                     
@@ -477,7 +477,7 @@ function IoTDeviceDashboard() {
                           ...newDevice,
                           location: {...newDevice.location, ward: e.target.value}
                         })}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                       />
                     </div>
                     
@@ -490,7 +490,7 @@ function IoTDeviceDashboard() {
                           ...newDevice,
                           location: {...newDevice.location, room: e.target.value}
                         })}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                       />
                     </div>
                     
@@ -503,7 +503,7 @@ function IoTDeviceDashboard() {
                           ...newDevice,
                           location: {...newDevice.location, bed: e.target.value}
                         })}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                       />
                     </div>
                     
@@ -513,22 +513,22 @@ function IoTDeviceDashboard() {
                         type="text"
                         value={newDevice.patientId}
                         onChange={(e) => setNewDevice({...newDevice, patientId: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                       />
                     </div>
                   </div>
                   
-                  <div className="flex justify-end space-x-4 pt-4">
+                  <div className="flex justify-end space-x-3 pt-4">
                     <button
                       type="button"
                       onClick={() => setShowAddDevice(false)}
-                      className="px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
+                      className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-all duration-200"
                     >
                       Cancel
                     </button>
                     <button
                       type="submit"
-                      className="px-6 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-200"
+                      className="px-6 py-2 bg-navy-700 hover:bg-navy-600 text-white rounded-lg shadow-md transition-all duration-200"
                     >
                       Add Device
                     </button>

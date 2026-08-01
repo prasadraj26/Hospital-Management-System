@@ -287,7 +287,7 @@ function DoctorProfile() {
 
   if (loading) {
     return (
-      <section className="bg-slate-300 flex justify-center items-center">
+      <section className="bg-white min-h-screen flex justify-center items-center">
         <div className="h-[80%] w-[80%] bg-white shadow-xl p-2 flex justify-center items-center">
           <p className="text-xl">Loading doctor profile...</p>
         </div>
@@ -298,7 +298,7 @@ function DoctorProfile() {
   if (!userData) {
     // Show default profile with sample data and edit functionality
     return (
-      <section className="bg-slate-300 flex justify-center items-center min-h-screen">
+      <section className="bg-white flex justify-center items-center min-h-screen">
         <div className="h-[80%] w-[90%] max-w-6xl bg-white shadow-xl p-2 flex overflow-hidden">
           <DoctorSidebar userName="Dr. John Smith" profilePic={profiePic} />
           <div className="w-[70%] ms-4 md:ms-24 p-2 md:p-4 flex flex-col overflow-y-auto">
@@ -526,7 +526,7 @@ function DoctorProfile() {
 
   if (userData.role !== 'doctor') {
   return (
-    <section className="bg-slate-300 flex justify-center items-center">
+    <section className="bg-white min-h-screen flex justify-center items-center">
         <div className="h-[80%] w-[80%] bg-white shadow-xl p-2 flex justify-center items-center">
           <div className="text-center">
             <p className="text-xl text-red-600 mb-4">Access Denied</p>
@@ -539,23 +539,23 @@ function DoctorProfile() {
   }
 
   return (
-    <section className="bg-gradient-to-br from-purple-50 via-white to-indigo-50 flex justify-center items-center min-h-screen">
-      <div className="h-[80%] w-[90%] max-w-6xl bg-white shadow-xl p-2 flex overflow-hidden rounded-xl border border-purple-100">
+    <section className="bg-white flex justify-center items-center min-h-screen pt-20 pb-8">
+      <div className="w-[95%] max-w-6xl bg-white shadow-xl flex flex-col md:flex-row overflow-hidden rounded-xl border border-navy-100 min-h-[80vh]">
         <DoctorSidebar userName={userData?.name || "Doctor"} profilePic={profiePic} />
-        <div className="w-[70%] ms-4 md:ms-24 p-2 md:p-4 flex flex-col overflow-y-auto">
+        <div className="w-full md:w-[75%] p-4 md:p-6 flex flex-col overflow-y-auto">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
-            <h1 className="font-bold text-2xl md:text-3xl bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Doctor Profile</h1>
+            <h1 className="font-bold text-2xl md:text-3xl text-navy-700">Doctor Profile</h1>
             {!isEditing && (
               <div className="flex space-x-2">
                 <button
                   onClick={handleEdit}
-                  className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-all duration-200"
+                  className="bg-navy-700 hover:bg-navy-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition-all duration-200"
                 >
                   Edit Profile
                 </button>
                 <button
                   onClick={() => setShowPasswordModal(true)}
-                  className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-all duration-200"
+                  className="bg-navy-100 hover:bg-navy-200 text-navy-800 border border-navy-200 font-semibold py-2 px-4 rounded-lg transition-all duration-200"
                 >
                   Change Password
                 </button>
@@ -693,10 +693,10 @@ function DoctorProfile() {
             <button
                   type="submit"
                   disabled={isUpdating}
-                  className={`font-bold py-2 px-4 rounded-lg shadow-lg transition-all duration-200 ${
+                  className={`font-semibold py-2 px-4 rounded-lg shadow-md transition-all duration-200 ${
                     isUpdating 
-                      ? 'bg-gray-400 cursor-not-allowed text-gray-200' 
-                      : 'bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white'
+                      ? 'bg-navy-200 cursor-not-allowed text-navy-400' 
+                      : 'bg-navy-700 hover:bg-navy-600 text-white'
                   }`}
                 >
                   {isUpdating ? (

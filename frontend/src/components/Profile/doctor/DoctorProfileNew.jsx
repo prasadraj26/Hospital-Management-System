@@ -118,7 +118,7 @@ function DoctorProfile() {
 
   if (loading) {
     return (
-      <section className="bg-slate-300 flex justify-center items-center">
+      <section className="bg-white min-h-screen flex justify-center items-center">
         <div className="h-[80%] w-[80%] bg-white shadow-xl p-2 flex justify-center items-center">
           <p className="text-xl">Loading doctor profile...</p>
         </div>
@@ -128,7 +128,7 @@ function DoctorProfile() {
 
   if (!userData) {
     return (
-      <section className="bg-slate-300 flex justify-center items-center">
+      <section className="bg-white min-h-screen flex justify-center items-center">
         <div className="h-[80%] w-[80%] bg-white shadow-xl p-2 flex justify-center items-center">
           <p className="text-xl text-red-600">No user data found. Please login again.</p>
         </div>
@@ -137,7 +137,7 @@ function DoctorProfile() {
   }
 
   return (
-    <section className="bg-slate-300 flex justify-center items-center min-h-screen">
+    <section className="bg-white flex justify-center items-center min-h-screen">
       <div className="h-[80%] w-[80%] bg-white shadow-xl p-2 flex">
         <DoctorSidebar userName={userData?.name || "Doctor"} profilePic={profiePic} />
         <div className="w-[70%] ms-24 p-4 flex flex-col">

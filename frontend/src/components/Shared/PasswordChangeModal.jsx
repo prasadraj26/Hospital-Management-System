@@ -73,35 +73,35 @@ const PasswordChangeModal = ({ isOpen, onClose, userId, userRole }) => {
         
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium mb-1">Current Password</label>
+            <label className="block text-sm font-medium mb-1 text-gray-700">Current Password</label>
             <input
               type="password"
               value={currentPassword}
               onChange={(e) => setCurrentPassword(e.target.value)}
-              className="w-full h-10 rounded-md border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+              className="w-full h-10 rounded-lg border border-navy-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-navy-500"
               required
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-1">New Password</label>
+            <label className="block text-sm font-medium mb-1 text-gray-700">New Password</label>
             <input
               type="password"
               value={newPassword}
               onChange={(e) => setNewPassword(e.target.value)}
-              className="w-full h-10 rounded-md border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+              className="w-full h-10 rounded-lg border border-navy-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-navy-500"
               required
               minLength={6}
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-1">Confirm New Password</label>
+            <label className="block text-sm font-medium mb-1 text-gray-700">Confirm New Password</label>
             <input
               type="password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              className="w-full h-10 rounded-md border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+              className="w-full h-10 rounded-lg border border-navy-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-navy-500"
               required
               minLength={6}
             />
@@ -111,17 +111,17 @@ const PasswordChangeModal = ({ isOpen, onClose, userId, userRole }) => {
             <button
               type="button"
               onClick={onClose}
-              className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+              className="bg-navy-100 hover:bg-navy-200 text-navy-800 font-medium py-2 px-4 rounded-lg transition-all duration-200"
             >
               Cancel
             </button>
             <button
               type="submit"
               disabled={isLoading}
-              className={`font-bold py-2 px-4 rounded ${
+              className={`font-medium py-2 px-4 rounded-lg transition-all duration-200 ${
                 isLoading 
-                  ? 'bg-gray-400 cursor-not-allowed text-gray-200' 
-                  : 'bg-blue-500 hover:bg-blue-700 text-white'
+                  ? 'bg-navy-200 cursor-not-allowed text-navy-400' 
+                  : 'bg-navy-700 hover:bg-navy-600 text-white'
               }`}
             >
               {isLoading ? 'Changing...' : 'Change Password'}

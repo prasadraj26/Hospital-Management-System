@@ -83,10 +83,10 @@ function UserBookAppointment() {
   };
 
   return (
-    <section className="bg-slate-300 flex justify-center items-center">
-      <div className="h-[80%] w-[80%] bg-white shadow-xl p-2 flex">
-      <UserSidebar profiePic={profiePic} userName={userData.userName} />
-        <div className=" w-[70%] ms-24 p-4 flex flex-col justify-around ">
+    <section className="bg-white flex justify-center items-center min-h-screen pt-20 pb-8">
+      <div className="w-[95%] max-w-6xl bg-white shadow-xl flex flex-col md:flex-row overflow-hidden rounded-xl border border-navy-100 min-h-[80vh]">
+        <UserSidebar profiePic={profiePic} userName={userData.userName} />
+        <div className="w-full md:w-[75%] p-4 md:p-6 flex flex-col overflow-y-auto">
           <p className="font-semibold text-3xl">Book Appointment</p>
           <form action="" className="flex flex-col h-[80%] justify-between">
             <div className="w-full flex justify-between">

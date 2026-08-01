@@ -50,11 +50,11 @@ function UserAppointment() {
 
   }, []);
   return (
-    <section className="flex items-center justify-center bg-slate-300">
-      <div className="flex h-[80%] w-[80%] bg-white p-2 shadow-xl">
-      <UserSidebar profiePic={profiePic} userName={userData.userName} />
-        <div>
-          <div className="flex flex-col gap-4 p-4">
+    <section className="bg-white flex justify-center items-center min-h-screen pt-20 pb-8">
+      <div className="w-[95%] max-w-6xl bg-white shadow-xl flex flex-col md:flex-row overflow-hidden rounded-xl border border-navy-100 min-h-[80vh]">
+        <UserSidebar profiePic={profiePic} userName={userData.userName} />
+        <div className="w-full md:w-[75%] p-4 md:p-6 flex flex-col overflow-y-auto">
+          <div className="flex flex-col gap-4">
             <h1 className="text-3xl font-medium">Appointments</h1>
             <div className="flex flex-col gap-4">
               {appointments.map((appointment,index) => {

@@ -94,7 +94,7 @@ function SignIn() {
 
   return (
     <motion.section
-      className="bg-gradient-to-br from-purple-50 via-white to-indigo-50 h-screen w-screen">
+      className="bg-white h-screen w-screen">
 
       <motion.div
       ref={ref}
@@ -104,17 +104,17 @@ function SignIn() {
       whileInView={{ opacity: 1 }}
        className="flex items-center justify-center h-full max-w-7xl m-auto md:w-[60%] rounded-xl lg:w-[40%]">
 
-        <div className="xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md bg-gradient-to-br from-purple-100 to-indigo-100 shadow-xl shadow-purple-200 p-4 rounded-lg border border-purple-200">
+        <div className="xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md bg-white shadow-xl p-6 rounded-xl border border-navy-100">
 
-          <h2 className="text-center text-2xl font-bold leading-tight bg-gradient-to-r from-[rgb(71,119,181)] to-[rgb(71,119,181)] bg-clip-text text-transparent">
+          <h2 className="text-center text-2xl font-bold leading-tight text-navy-700">
             Sign in to your account
           </h2>
 
-          <p className="mt-2 text-center text-sm text-[rgb(71,119,181)]">
+          <p className="mt-2 text-center text-sm text-navy-600">
             Don&apos;t have an account?{" "}
             <Link
               to="/sign-up"
-              className="font-semibold text-[rgb(71,119,181)] hover:underline"
+              className="font-semibold text-navy-700 hover:underline"
             >
               Create a free account
             </Link>
@@ -124,12 +124,12 @@ function SignIn() {
             <div className="space-y-5">
 
               <div>
-                <label className="text-base font-medium text-[rgb(71,119,181)]">
+                <label className="text-sm font-medium text-navy-800">
                   Email address
                 </label>
-                <div className="mt-2 border-[rgb(71,119,181)] border-2 rounded-lg">
+                <div className="mt-2 border border-navy-200 rounded-lg bg-white focus-within:ring-2 focus-within:ring-navy-500">
                   <input
-                    className="flex h-10 w-full rounded-md outline-none bg-transparent px-3 py-2 text-sm placeholder:text-[rgb(71,119,181)]"
+                    className="flex h-10 w-full rounded-lg outline-none bg-transparent px-3 py-2 text-sm placeholder:text-gray-400"
                     type="email"
                     placeholder="Email"
                     onChange={(e) =>
@@ -141,12 +141,12 @@ function SignIn() {
               </div>
 
               <div>
-                <label className="text-base font-medium text-[rgb(71,119,181)]">
+                <label className="text-sm font-medium text-navy-800">
                   Password
                 </label>
-                <div className="mt-2 flex items-center border-[rgb(71,119,181)] border-2 rounded-lg">
+                <div className="mt-2 flex items-center border border-navy-200 rounded-lg bg-white focus-within:ring-2 focus-within:ring-navy-500">
                   <input
-                    className="flex h-10 w-full outline-none bg-transparent px-3 py-2 text-sm placeholder:text-[rgb(71,119,181)]"
+                    className="flex h-10 w-full outline-none bg-transparent px-3 py-2 text-sm placeholder:text-gray-400"
                     type={!isPassVisible ? "password":"text"}
                     placeholder="Password"
                     onChange={(e) =>
@@ -154,7 +154,7 @@ function SignIn() {
                     }
                     value={data.password}
                   />
-                  <div onClick={handleVisible} className="cursor-pointer px-2">
+                  <div onClick={handleVisible} className="cursor-pointer px-3 text-gray-500">
                     👁️
                   </div>
                 </div>
@@ -163,7 +163,7 @@ function SignIn() {
               <button
                 onClick={handleSubmit}
                 type="button"
-                className="w-full rounded-md bg-[rgb(71,119,181)] px-3.5 py-2.5 text-white font-semibold hover:bg-[rgb(60,100,160)] transition"
+                className="w-full rounded-lg bg-navy-700 px-3.5 py-2.5 text-white font-semibold hover:bg-navy-600 transition shadow-md"
               >
                 Get started
               </button>
@@ -171,11 +171,11 @@ function SignIn() {
             </div>
           </form>
 
-          <div className="mt-3 space-y-3">
+          <div className="mt-4 space-y-3">
 
             <button
               type="button"
-              className="w-full rounded-md border border-[rgb(71,119,181)] text-[rgb(71,119,181)] bg-white px-3.5 py-2.5 font-semibold hover:bg-[rgba(71,119,181,0.1)] transition"
+              className="w-full rounded-lg border border-navy-200 text-navy-800 bg-white px-3.5 py-2.5 font-semibold hover:bg-navy-50 transition shadow-sm"
               onClick={handleDoctor}
             >
               SignIn As Doctor
@@ -183,7 +183,7 @@ function SignIn() {
 
             <button
               type="button"
-              className="w-full rounded-md border border-[rgb(71,119,181)] text-[rgb(71,119,181)] bg-white px-3.5 py-2.5 font-semibold hover:bg-[rgba(71,119,181,0.1)] transition"
+              className="w-full rounded-lg border border-navy-200 text-navy-800 bg-white px-3.5 py-2.5 font-semibold hover:bg-navy-50 transition shadow-sm"
               onClick={handleNurse}
             >
               SignIn As Nurse

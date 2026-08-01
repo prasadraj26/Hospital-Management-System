@@ -64,10 +64,10 @@ function NurseMedication() {
   
 
   return (
-    <section className="bg-slate-300 flex justify-center items-center">
-      <div className="h-[80%] w-[80%] bg-white shadow-xl p-2 flex">
-      <NurseSidebar profilePic={profilePic} userName={userData.name} />
-        <div className="overflow-auto  justify-center items-center w-[70%] ms-24 p-4 flex flex-col ">
+    <section className="bg-white flex justify-center items-center min-h-screen pt-20 pb-8">
+      <div className="w-[95%] max-w-6xl bg-white shadow-xl flex flex-col md:flex-row overflow-hidden rounded-xl border border-navy-100 min-h-[80vh]">
+        <NurseSidebar profilePic={profilePic} userName={userData.name} />
+        <div className="w-full md:w-[75%] p-4 md:p-6 flex flex-col items-center justify-center">
           <form className="flex flex-col w-[60%] gap-5" action="">
             <div>
               <p>Enter Patient Name:</p>

@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Navbar from "../Shared/Navbar";
+import Footer from "../Shared/Footer";
 import axios from "axios";
 import Swal from "sweetalert2";
-import {motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 
 function ContactUs() {
@@ -17,6 +18,7 @@ function ContactUs() {
     setPhoneNo("");
     setComment("");
   };
+
   const { ref, inView } = useInView({
     triggerOnce: true, 
     threshold: 0.3, 
@@ -24,143 +26,115 @@ function ContactUs() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      await axios.post("http://localhost:4451/api/user/add-contact-us", {
-        name: name,
-        phone: phone,
-        email: email,
-        message: message
+    axios
+      .post("http://localhost:4451/api/query/add-query", {
+        name,
+        email,
+        phone,
+        message,
+      })
+      .then((res) => {
+        if (res.data.message === "Query Send SuccessFully") {
+          Swal.fire({
+            title: "Success",
+            icon: "success",
+            text: "Query Sent Successfully! We Will Get Back To You Soon!",
+            button: "Ok",
+          });
+          resetForm();
+        }
+      })
+      .catch((err) => {
+        Swal.fire({
+          title: "Error",
+          icon: "error",
+          button: "Ok",
+          text: "Error Sending Query! Please Try Again!",
+        });
       });
-      Swal.fire({
-        title: "Success",
-        icon: "success",
-        confirmButtonText: "Ok",
-        text: "Message Sent Successfully! We will get back to you soon!",
-      });
-      resetForm();
-    } catch (err) {
-      Swal.fire({
-        title: "Error",
-        icon: "error",
-        confirmButtonText: "Ok",
-        text: "Error Sending Message! Please Try Again!",
-      });
-    }
   };
 
   return (
-    <section
-    
-  
-        
-        className="h-screen w-screen bg-gradient-to-br from-purple-50 to-indigo-50">
-      <Navbar />
-      <motion.div 
-      ref={ref}
-      initial={{ opacity: 0 }} 
-      animate={{ opacity: inView ? 1 : 0 }} 
-      transition={{ duration: 1.5 }}
-      whileInView={{ opacity: 1 }}
-       className="h-screen w-screen flex justify-center items-center pt-24">
-        <div className="flex gap-10 mx-14 py-14">
-          <div className="flex-col hidden md:flex">
-            <span className="text-zinc-650 text-4xl">Locate Us</span>
-            <br />
-            <span className="text-zinc-550 text-2xl">
-              HMS TamilNadu - India
-            </span>
-            <span className="text-zinc-500 text-base">
-              HMS, Salem, TamilNadu,
-              India
-            </span>
-            <br />
-            <div className="flex gap-20 items-start">
-              <div className="flex flex-col">
-                <span className="text-zinc-650 text-2xl">Telephone</span>
-                <span className="text-zinc-500 text-base">
-                  +91 123 456 7890
-                </span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-zinc-650 text-2xl">Emergency</span>
-                <span className="text-zinc-500 text-base">
-                  +91 123 456 7890
-                </span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-zinc-650 text-2xl">
-                  Corporate Enquiries
-                </span>
-                <span className="text-zinc-500 text-base">
-                  +91 123 456 7890
-                </span>
-              </div>
-            </div>
-            <br />
-            <div className="flex flex-col">
-              <span className="text-zinc-650 text-2xl">Email</span>
-              <span className="text-zinc-500 text-base">feedback@hms.org</span>
-            </div>
-          </div>
-          <motion.div
+    <>
+      <section className="min-h-screen bg-white">
+        <Navbar />
+        <motion.div 
           ref={ref}
-          initial={{ opacity: 0, x: 50 }} 
-          animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 50 }} 
+          initial={{ opacity: 0 }} 
+          animate={{ opacity: inView ? 1 : 0 }} 
           transition={{ duration: 1.5 }}
           whileInView={{ opacity: 1 }}
-           className="flex flex-col w-[500px] h-4/5 p-4 justify-center items-center bg-gradient-to-br from-purple-100 to-indigo-100 gap-10 border border-purple-200 broder-2 rounded-lg border-transparent shadow-xl shadow-purple-200">
-            <span className="text-zinc-650 text-3xl font-medium">
-              Get in touch
-            </span>
-            <input
-              className="flex h-10 w-2/3 rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
-              type="text"
-              placeholder="Name *"
-              onChange={(e) =>
-                setName(e.target.value)
-              }
-          
-            />
-            <input
-              className="flex h-10 w-2/3 rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
-              type="number"
-              placeholder="Phone / Mobile *"
-              onChange={(e) =>
-                setPhoneNo(e.target.value)
-              }
-       
-            />
-            <input
-              className="flex h-10 w-2/3 rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
-              type="email"
-              placeholder="Email Address *"
-              onChange={(e) =>
-                setEmail(e.target.value)
-              }
+          className="min-h-screen max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex justify-center items-center pt-24 pb-12"
+        >
+          <div className="flex flex-col md:flex-row gap-12 w-full items-center justify-between">
+            
+            <div className="flex flex-col space-y-4">
+              <span className="text-navy-700 text-4xl font-bold">Locate Us</span>
+              <span className="text-navy-600 text-2xl font-semibold">HMS Salem, TamilNadu</span>
+              <p className="text-gray-600 font-medium">Find us at our main hospital campus or reach out directly.</p>
+              
+              <div className="flex flex-col space-y-3 text-navy-800 font-medium pt-2">
+                <span className="flex items-center gap-2">📍 Address: HMS Campus, Salem, TamilNadu, India</span>
+                <span className="flex items-center gap-2">📞 Telephone: +91 123 456 7890</span>
+                <span className="flex items-center gap-2">🚨 Emergency: +91 123 456 7899</span>
+                <span className="flex items-center gap-2">✉️ Email: feedback@hms.org</span>
+              </div>
+            </div>
 
-            />
-            <textarea
-              id="message"
-              rows="4"
-              className="flex h-30 w-2/3 rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
-              placeholder="Message *"
-              onChange={(e) =>
-                setComment(e.target.value)
-              }
-
-            ></textarea>
-            <button
-              onClick={handleSubmit}
-              type="button"
-                className="inline-flex w-[95%]  items-center justify-center lg:me-10 rounded-md bg-[rgb(71,119,181)] px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-[rgb(60,100,160)] hover:scale-105 duration-300 active:scale-95 shadow-lg"
-
+            <motion.div 
+              ref={ref}
+              initial={{ opacity: 0, x: 50 }} 
+              animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 50 }} 
+              transition={{ duration: 1.5 }}
+              whileInView={{ opacity: 1 }}
+              className="flex flex-col w-full md:w-[480px] p-6 md:p-8 bg-white border border-navy-100 rounded-xl shadow-xl space-y-4"
             >
-              Submit
-            </button>
-          </motion.div>
-        </div>
-      </motion.div>
-    </section>
+              <span className="text-navy-700 text-3xl font-bold text-center mb-2">
+                Get in touch
+              </span>
+              <input
+                className="w-full h-11 rounded-lg border border-navy-200 bg-white px-4 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-navy-500"
+                type="text"
+                placeholder="Name *"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+              <input
+                className="w-full h-11 rounded-lg border border-navy-200 bg-white px-4 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-navy-500"
+                type="number"
+                placeholder="Phone / Mobile *"
+                value={phone}
+                onChange={(e) => setPhoneNo(e.target.value)}
+              />
+              <input
+                className="w-full h-11 rounded-lg border border-navy-200 bg-white px-4 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-navy-500"
+                type="email"
+                placeholder="Email Address *"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <textarea
+                id="message"
+                rows="4"
+                className="w-full rounded-lg border border-navy-200 bg-white px-4 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-navy-500"
+                placeholder="Message *"
+                value={message}
+                onChange={(e) => setComment(e.target.value)}
+              ></textarea>
+              <button
+                onClick={handleSubmit}
+                type="button"
+                className="w-full mt-2 items-center justify-center rounded-lg bg-navy-700 px-4 py-3 font-semibold text-white hover:bg-navy-600 hover:scale-[1.01] duration-200 active:scale-95 shadow-md"
+              >
+                Submit
+              </button>
+            </motion.div>
+
+          </div>
+        </motion.div>
+      </section>
+      <Footer />
+    </>
   );
 }
 

@@ -35,96 +35,69 @@ function AdminDashboard() {
   }, []);
 
   return (
-    <section className="bg-white min-h-screen flex justify-center items-center">
+    <section className="bg-white min-h-screen flex justify-center items-center pt-20 pb-8">
       <div
-        className="h-[80%] w-[80%] bg-white shadow-xl p-2 flex rounded-xl"
-        style={{ borderColor: "rgb(71,119,181)", borderWidth: "1px" }}
+        className="w-[95%] max-w-6xl bg-white shadow-xl flex flex-col md:flex-row overflow-hidden rounded-xl border border-navy-100 min-h-[80vh]"
       >
         <AdminSidebar userName={"Admin"} profiePic={profiePic} />
-        <div className=" w-[70%] ms-24 p-4 flex flex-col justify-around ">
+        <div className="w-full md:w-[75%] p-4 md:p-6 flex flex-col">
           <p
-            className="font-semibold text-3xl text-center"
-            style={{ color: "rgb(71,119,181)" }}
+            className="font-bold text-3xl text-center text-navy-700 mb-6"
           >
-            Dashboard
+            Dashboard Overview
           </p>
 
-          <div className="w-full h-[80%] items-center flex flex-col gap-4">
+          <div className="w-full h-[80%] items-center flex flex-col gap-6">
             
-            <div className="flex w-full justify-evenly h-[30%]">
+            <div className="flex w-full justify-evenly gap-6">
               <div
-                className="flex shadow-xl rounded-xl border-2 w-[30%] justify-center items-center transition-all duration-200"
-                style={{
-                  borderColor: "rgb(71,119,181)",
-                  backgroundColor: "white",
-                }}
+                className="flex shadow-md rounded-lg border border-navy-100 w-[45%] p-6 justify-center items-center bg-white hover:bg-navy-50/50 transition-all duration-200"
               >
                 <span
-                  className="font-semibold text-xl"
-                  style={{ color: "rgb(71,119,181)" }}
+                  className="font-bold text-xl text-navy-700"
                 >
                   Doctors: {docount}
                 </span>
               </div>
 
               <div
-                className="flex shadow-xl rounded-xl border-2 w-[30%] justify-center items-center transition-all duration-200"
-                style={{
-                  borderColor: "rgb(71,119,181)",
-                  backgroundColor: "white",
-                }}
+                className="flex shadow-md rounded-lg border border-navy-100 w-[45%] p-6 justify-center items-center bg-white hover:bg-navy-50/50 transition-all duration-200"
               >
                 <span
-                  className="font-semibold text-xl"
-                  style={{ color: "rgb(71,119,181)" }}
+                  className="font-bold text-xl text-navy-700"
                 >
                   Nurses: {nursecount}
                 </span>
               </div>
             </div>
 
-            <div className="flex w-full justify-evenly h-[30%]">
+            <div className="flex w-full justify-evenly gap-6">
               <div
-                className="flex shadow-xl rounded-xl border-2 w-[30%] justify-center items-center transition-all duration-200"
-                style={{
-                  borderColor: "rgb(71,119,181)",
-                  backgroundColor: "white",
-                }}
+                className="flex shadow-md rounded-lg border border-navy-100 w-[45%] p-6 justify-center items-center bg-white hover:bg-navy-50/50 transition-all duration-200"
               >
                 <span
-                  className="font-semibold text-xl"
-                  style={{ color: "rgb(71,119,181)" }}
+                  className="font-bold text-xl text-navy-700"
                 >
                   Patients: {patientcount}
                 </span>
               </div>
 
               <div
-                className="flex shadow-xl rounded-xl border-2 w-[30%] justify-center items-center transition-all duration-200"
-                style={{
-                  borderColor: "rgb(71,119,181)",
-                  backgroundColor: "white",
-                }}
+                className="flex shadow-md rounded-lg border border-navy-100 w-[45%] p-6 justify-center items-center bg-white hover:bg-navy-50/50 transition-all duration-200"
               >
                 <span
-                  className="font-semibold text-xl"
-                  style={{ color: "rgb(71,119,181)" }}
+                  className="font-bold text-xl text-navy-700"
                 >
-                  Query: {querieslef}
+                  Queries: {querieslef}
                 </span>
               </div>
             </div>
 
             <div
-              className="flex shadow-xl rounded-xl border-2 w-[30%] h-[30%] justify-center items-center transition-all duration-200"
-              style={{
-                borderColor: "rgb(71,119,181)",
-                backgroundColor: "white",
-              }}
+              className="flex shadow-md rounded-lg border border-navy-100 w-[45%] p-6 justify-center items-center bg-white hover:bg-navy-50/50 transition-all duration-200"
             >
               <span
-                className="font-semibold text-xl"
-                style={{ color: "rgb(71,119,181)" }}
+                className="font-bold text-xl text-navy-700"
               >
                 Departments: {depts}
               </span>

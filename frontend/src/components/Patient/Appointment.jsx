@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../Shared/Navbar";
+import Footer from "../Shared/Footer";
 import appoint from "../../assets/appoint.png";
 import axios from "axios";
 import Swal from "sweetalert2";
@@ -68,13 +69,14 @@ function Appointment() {
   };
 
   return (
+    <>
     <motion.section
     
 
-    className="bg-gradient-to-br from-purple-50 to-indigo-50">
+    className="bg-white min-h-screen">
       <Navbar />
-      <div className="h-screen f-screen  flex justify-center items-center">
-        <div className=" h-[80%] w-full mt-[80px] flex justify-center items-center gap-5 rounded-xl">
+      <div className="min-h-screen max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex justify-center items-center pt-[80px]">
+        <div className="w-full flex justify-center items-center gap-8 py-8">
           <motion.div
           ref={ref}
           initial={{ opacity: 0, x: -50 }} 
@@ -82,7 +84,7 @@ function Appointment() {
           transition={{ duration: 1.5 }}
           whileInView={{ opacity: 1 }}
            className="hidden lg:block">
-            <img src={appoint} className="size-80" alt="nurse" />
+            <img src={appoint} className="size-80 object-contain" alt="nurse" />
           </motion.div>
           <motion.div
           ref={ref}
@@ -91,59 +93,59 @@ function Appointment() {
           transition={{ duration: 1.5 }}
           whileInView={{ opacity: 1 }}
           
-          className=" shadow-xl bg-gradient-to-br from-purple-100 to-indigo-100 shadow-purple-200 lg:w-[50%] w-full overflow-auto">
-            <form className="flex flex-col w-full h-full  gap-4 p-5 justify-center lg:ps-14 items-center">
-              <p className="text-2xl font-semibold">Book Appointment</p>
-              <div className="w-full flex m-2 justify-center items-center ">
-                <div className="w-full flex flex-col">
+          className="shadow-xl bg-white border border-navy-100 rounded-xl lg:w-[60%] w-full p-6 md:p-8">
+            <form className="flex flex-col w-full gap-4 items-center">
+              <p className="text-2xl font-bold text-navy-700 mb-2">Book Appointment</p>
+              <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="flex flex-col gap-1 text-sm font-medium text-navy-800">
                   Name:
                   <input
-                    className=" h-10 w-[300px] rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="h-10 w-full rounded-lg border border-navy-200 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-navy-500"
                     type="text"
                     placeholder="Name"
                     onChange={(e) => setAppointment({ ...appointment, patient: e.target.value })}
                   />
                 </div>
-                <div className="w-full flex flex-col">
+                <div className="flex flex-col gap-1 text-sm font-medium text-navy-800">
                   Phone Number:
                   <input
-                    className=" h-10 w-[300px] rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="h-10 w-full rounded-lg border border-navy-200 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-navy-500"
                     type="number"
                     placeholder="Phone/Mobile"
                     onChange={(e) => setAppointment({ ...appointment, phone: e.target.value })}
                   />
                 </div>
               </div>
-              <div className="w-full flex m-2 justify-center items-center">
-                <div className="w-[90%] flex flex-col">
+              <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="flex flex-col gap-1 text-sm font-medium text-navy-800">
                   Date Of Appointment:
                   <input
-                    className=" h-10 w-[300px] rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="h-10 w-full rounded-lg border border-navy-200 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-navy-500"
                     type="date"
                     placeholder="Date"
                     onChange={(e) => setAppointment({ ...appointment, appointmentDate: e.target.value })}
                   />
                 </div>
-                <div className="w-[90%] flex flex-col">
+                <div className="flex flex-col gap-1 text-sm font-medium text-navy-800">
                   Time Of Appointment:
                   <input
-                    className=" h-10 w-[300px] rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="h-10 w-full rounded-lg border border-navy-200 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-navy-500"
                     type="time"
                     placeholder="Time"
                     onChange={(e) => setAppointment({ ...appointment, time: e.target.value })}
                   />
                 </div>
               </div>
-              <div className="w-full flex m-2 justify-center items-center">
-                <div className="w-full flex flex-col">
+              <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="flex flex-col gap-1 text-sm font-medium text-navy-800">
                   Choose Doctor Name:
                   <select
                     id="doctors"
-                    className="h-10 w-[300px] rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="h-10 w-full rounded-lg border border-navy-200 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-navy-500"
                     onChange={(e) => setAppointment({ ...appointment, doctor: e.target.value })}
                   >
                     <option value="Choose you Consultant">
-                      Choose you Consultant
+                      Choose your Consultant
                     </option>
                     {doctors.map((doctors) => (
                       <option key={doctors._id} value={doctors.name}>
@@ -152,38 +154,38 @@ function Appointment() {
                     ))}
                   </select>
                 </div>
-                <div className="w-full flex flex-col">
+                <div className="flex flex-col gap-1 text-sm font-medium text-navy-800">
                   Enter Reason:
                   <textarea
-                    className="h-10 w-[300px] rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
-                    rows="10"
+                    className="h-10 w-full rounded-lg border border-navy-200 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-navy-500"
+                    rows="2"
                     placeholder="Reason"
                     onChange={(e) => setAppointment({ ...appointment, reason: e.target.value })}
                   ></textarea>
                 </div>
               </div>
-              <div className="w-full flex m-2 justify-center items-center">
-                <div className="w-full flex flex-col">
+              <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="flex flex-col gap-1 text-sm font-medium text-navy-800">
                   Email:
                   <input
-                    className=" h-10 w-[300px] rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="h-10 w-full rounded-lg border border-navy-200 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-navy-500"
                     type="email"
                     placeholder="Enter Email"
                     onChange={(e) => setAppointment({ ...appointment, email: e.target.value })}
                   />
                 </div>
-                <div className="w-full flex flex-col">
+                <div className="flex flex-col gap-1 text-sm font-medium text-navy-800">
                   City: 
                   <input
-                    className=" h-10 w-[300px] rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
-                    type="email"
-                    placeholder="Enter Email"
+                    className="h-10 w-full rounded-lg border border-navy-200 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-navy-500"
+                    type="text"
+                    placeholder="Enter City"
                     onChange={(e) => setAppointment({ ...appointment, city: e.target.value })}
                   />
                 </div>
               </div>
               <button
-                  className="inline-flex w-[95%]  items-center justify-center lg:me-10 rounded-md bg-[rgb(71,119,181)] px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-[rgb(60,100,160)] hover:scale-105 duration-300 active:scale-95 shadow-lg"
+                  className="w-full mt-4 items-center justify-center rounded-lg bg-navy-700 px-4 py-3 font-semibold leading-6 text-white hover:bg-navy-600 hover:scale-[1.01] duration-200 active:scale-95 shadow-md"
 
                 onClick={(e) => handleSubmit(e)}
               >
@@ -194,6 +196,8 @@ function Appointment() {
         </div>
       </div>
     </motion.section>
+    <Footer />
+    </>
   );
 }
 

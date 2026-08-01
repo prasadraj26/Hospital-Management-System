@@ -314,28 +314,28 @@ function BillingSystem() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100 flex items-center justify-center">
+      <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading billing data...</p>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-navy-700 mx-auto mb-4"></div>
+          <p className="text-navy-700 font-medium">Loading billing data...</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100 p-6">
+    <div className="min-h-screen bg-white p-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="bg-white rounded-xl shadow-2xl overflow-hidden mb-6">
-          <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-6">
+        <div className="bg-white rounded-xl shadow-md border border-navy-100 overflow-hidden mb-6">
+          <div className="bg-navy-700 text-white p-6">
             <h1 className="text-3xl font-bold mb-2">💰 Billing & Payment System</h1>
-            <p className="text-purple-100">Comprehensive billing management with multiple payment methods</p>
+            <p className="text-navy-100">Comprehensive billing management with multiple payment methods</p>
           </div>
         </div>
 
         {/* Controls */}
-        <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
+        <div className="bg-white rounded-xl shadow-md border border-navy-100 p-6 mb-6">
           <div className="flex flex-wrap gap-4 items-center justify-between">
             <div className="flex flex-wrap gap-4">
               <div>
@@ -343,7 +343,7 @@ function BillingSystem() {
                 <select
                   value={filterStatus}
                   onChange={(e) => setFilterStatus(e.target.value)}
-                  className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                 >
                   <option value="all">All Status</option>
                   <option value="pending">Pending</option>
@@ -361,14 +361,14 @@ function BillingSystem() {
                   placeholder="Search by patient name or bill number"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                 />
               </div>
             </div>
             
             <button
               onClick={() => setShowCreateBill(true)}
-              className="px-6 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-200"
+              className="px-6 py-2 bg-navy-700 hover:bg-navy-600 text-white font-semibold rounded-lg shadow-md transition-all duration-200"
             >
               + Create Bill
             </button>
@@ -462,7 +462,7 @@ function BillingSystem() {
                           type="text"
                           value={newBill.patientName}
                           onChange={(e) => setNewBill({...newBill, patientName: e.target.value})}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                          className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                           required
                         />
                       </div>
@@ -472,7 +472,7 @@ function BillingSystem() {
                           type="email"
                           value={newBill.patientEmail}
                           onChange={(e) => setNewBill({...newBill, patientEmail: e.target.value})}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                          className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                         />
                       </div>
                       <div>
@@ -481,7 +481,7 @@ function BillingSystem() {
                           type="tel"
                           value={newBill.patientPhone}
                           onChange={(e) => setNewBill({...newBill, patientPhone: e.target.value})}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                          className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                         />
                       </div>
                       <div>
@@ -490,7 +490,7 @@ function BillingSystem() {
                           type="text"
                           value={newBill.doctorName}
                           onChange={(e) => setNewBill({...newBill, doctorName: e.target.value})}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                          className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                         />
                       </div>
                     </div>
@@ -508,7 +508,7 @@ function BillingSystem() {
                           type="text"
                           value={newItem.itemName}
                           onChange={(e) => setNewItem({...newItem, itemName: e.target.value})}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                          className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                           placeholder="e.g., Consultation"
                         />
                       </div>
@@ -517,7 +517,7 @@ function BillingSystem() {
                         <select
                           value={newItem.category}
                           onChange={(e) => setNewItem({...newItem, category: e.target.value})}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                          className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                         >
                           {itemCategories.map(cat => (
                             <option key={cat.value} value={cat.value}>{cat.label}</option>
@@ -531,7 +531,7 @@ function BillingSystem() {
                           min="1"
                           value={newItem.quantity}
                           onChange={(e) => setNewItem({...newItem, quantity: parseInt(e.target.value) || 1})}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                          className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                         />
                       </div>
                       <div>
@@ -542,7 +542,7 @@ function BillingSystem() {
                           min="0"
                           value={newItem.unitPrice}
                           onChange={(e) => setNewItem({...newItem, unitPrice: parseFloat(e.target.value) || 0})}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                          className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                         />
                       </div>
                       <div>
@@ -625,7 +625,7 @@ function BillingSystem() {
                   </button>
                   <button
                     onClick={createBill}
-                    className="px-6 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-200"
+                    className="px-6 py-2 bg-navy-700 hover:bg-navy-600 text-white rounded-lg transition-all duration-200 shadow-md"
                   >
                     Create Bill
                   </button>
@@ -668,7 +668,7 @@ function BillingSystem() {
                     <select
                       value={payment.paymentMethod}
                       onChange={(e) => setPayment({...payment, paymentMethod: e.target.value})}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                     >
                       {paymentMethods.map(method => (
                         <option key={method.value} value={method.value}>{method.label}</option>
@@ -685,7 +685,7 @@ function BillingSystem() {
                       max={selectedBill.balanceAmount}
                       value={payment.amount}
                       onChange={(e) => setPayment({...payment, amount: parseFloat(e.target.value) || 0})}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                     />
                   </div>
                   
@@ -695,7 +695,7 @@ function BillingSystem() {
                       type="text"
                       value={payment.transactionId}
                       onChange={(e) => setPayment({...payment, transactionId: e.target.value})}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                     />
                   </div>
                   
@@ -704,7 +704,7 @@ function BillingSystem() {
                     <textarea
                       value={payment.notes}
                       onChange={(e) => setPayment({...payment, notes: e.target.value})}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                       rows="3"
                     />
                   </div>

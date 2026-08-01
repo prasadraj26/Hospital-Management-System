@@ -332,11 +332,11 @@ function UserProfile() {
 
   if (loading) {
     return (
-      <section className="bg-gradient-to-br from-purple-50 via-white to-indigo-50 flex justify-center items-center min-h-screen">
-        <div className="h-[80%] w-[80%] bg-white shadow-xl shadow-purple-200 p-2 flex justify-center items-center rounded-xl border border-purple-100">
+      <section className="bg-white flex justify-center items-center min-h-screen">
+        <div className="h-[80%] w-[80%] bg-white shadow-xl p-2 flex justify-center items-center rounded-xl border border-navy-100">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-purple-600 mx-auto mb-4"></div>
-            <p className="text-xl text-purple-600 font-medium">Loading patient profile...</p>
+            <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-navy-700 mx-auto mb-4"></div>
+            <p className="text-xl text-navy-700 font-medium">Loading patient profile...</p>
           </div>
         </div>
       </section>
@@ -346,15 +346,15 @@ function UserProfile() {
   if (!userData) {
     // Show default profile with sample data and edit functionality
     return (
-      <section className="bg-gradient-to-br from-purple-50 via-white to-indigo-50 flex justify-center items-center min-h-screen">
-        <div className="h-[80%] w-[90%] max-w-6xl bg-white shadow-xl shadow-purple-200 p-2 flex overflow-hidden rounded-xl border border-purple-100">
+      <section className="bg-white flex justify-center items-center min-h-screen">
+        <div className="h-[80%] w-[90%] max-w-6xl bg-white shadow-xl p-2 flex overflow-hidden rounded-xl border border-navy-100">
           <UserSidebar profiePic={profiePic} userName="Patient" />
           <div className="w-[70%] ms-4 md:ms-24 p-2 md:p-4 flex flex-col overflow-y-auto">
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
-              <h1 className="font-bold text-2xl md:text-3xl bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Patient Profile (Demo Mode)</h1>
+              <h1 className="font-bold text-2xl md:text-3xl text-navy-700">Patient Profile (Demo Mode)</h1>
               <button
                 onClick={handleEdit}
-                className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-all duration-200"
+                className="bg-navy-700 hover:bg-navy-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition-all duration-200"
               >
                 Edit Profile
               </button>
@@ -370,7 +370,7 @@ function UserProfile() {
                       type="text"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className="flex h-10 w-full rounded-md border border-purple-300 bg-transparent px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                      className="flex h-10 w-full rounded-lg border border-navy-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-navy-500 transition-all duration-200"
                       required
                     />
                   </div>
@@ -380,7 +380,7 @@ function UserProfile() {
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="flex h-10 w-full rounded-md border border-purple-300 bg-transparent px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                      className="flex h-10 w-full rounded-lg border border-navy-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-navy-500 transition-all duration-200"
                       required
                     />
                   </div>
@@ -393,7 +393,7 @@ function UserProfile() {
                       type="text"
                       value={mobileNumber}
                       onChange={(e) => setMobileNumber(e.target.value)}
-                      className="flex h-10 w-full rounded-md border border-purple-300 bg-transparent px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                      className="flex h-10 w-full rounded-lg border border-navy-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-navy-500 transition-all duration-200"
                       required
                     />
                   </div>
@@ -403,7 +403,7 @@ function UserProfile() {
                       type="date"
                       value={dateOfBirth}
                       onChange={(e) => setDateOfBirth(e.target.value)}
-                      className="flex h-10 w-full rounded-md border border-purple-300 bg-transparent px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                      className="flex h-10 w-full rounded-lg border border-navy-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-navy-500 transition-all duration-200"
                       required
                     />
                   </div>
@@ -415,7 +415,7 @@ function UserProfile() {
                     <select
                       value={gender}
                       onChange={(e) => setGender(e.target.value)}
-                      className="flex h-10 w-full rounded-md border border-purple-300 bg-transparent px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                      className="flex h-10 w-full rounded-lg border border-navy-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-navy-500 transition-all duration-200"
                       required
                     >
                       <option value="">Select Gender</option>
@@ -430,7 +430,7 @@ function UserProfile() {
                       type="text"
                       value={address}
                       onChange={(e) => setAddress(e.target.value)}
-                      className="flex h-10 w-full rounded-md border border-purple-300 bg-transparent px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                      className="flex h-10 w-full rounded-lg border border-navy-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-navy-500 transition-all duration-200"
                       placeholder="Street Address"
                     />
                   </div>
@@ -443,7 +443,7 @@ function UserProfile() {
                       type="text"
                       value={city}
                       onChange={(e) => setCity(e.target.value)}
-                      className="flex h-10 w-full rounded-md border border-purple-300 bg-transparent px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                      className="flex h-10 w-full rounded-lg border border-navy-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-navy-500 transition-all duration-200"
                     />
                   </div>
                   <div className="flex flex-col">
@@ -452,7 +452,7 @@ function UserProfile() {
                       type="text"
                       value={state}
                       onChange={(e) => setState(e.target.value)}
-                      className="flex h-10 w-full rounded-md border border-purple-300 bg-transparent px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                      className="flex h-10 w-full rounded-lg border border-navy-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-navy-500 transition-all duration-200"
                     />
                   </div>
                 </div>
@@ -467,7 +467,7 @@ function UserProfile() {
                         type="text"
                         value={emergencyName}
                         onChange={(e) => setEmergencyName(e.target.value)}
-                        className="flex h-10 w-full rounded-md border border-purple-300 bg-transparent px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                        className="flex h-10 w-full rounded-lg border border-navy-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-navy-500 transition-all duration-200"
                         placeholder="Full Name"
                       />
                     </div>
@@ -476,7 +476,7 @@ function UserProfile() {
                       <select
                         value={emergencyRelationship}
                         onChange={(e) => setEmergencyRelationship(e.target.value)}
-                        className="flex h-10 w-full rounded-md border border-purple-300 bg-transparent px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                        className="flex h-10 w-full rounded-lg border border-navy-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-navy-500 transition-all duration-200"
                       >
                         <option value="">Select Relationship</option>
                         <option value="spouse">Spouse</option>
@@ -495,7 +495,7 @@ function UserProfile() {
                         type="text"
                         value={emergencyPhone}
                         onChange={(e) => setEmergencyPhone(e.target.value)}
-                        className="flex h-10 w-full rounded-md border border-purple-300 bg-transparent px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                        className="flex h-10 w-full rounded-lg border border-navy-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-navy-500 transition-all duration-200"
                         placeholder="Phone Number"
                       />
                     </div>
@@ -516,7 +516,7 @@ function UserProfile() {
                     className={`font-bold py-2 px-4 rounded-lg shadow-lg transition-all duration-200 ${
                       isUpdating 
                         ? 'bg-gray-400 cursor-not-allowed text-gray-200' 
-                        : 'bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white'
+                        : 'bg-navy-700 hover:bg-navy-600 text-white font-semibold'
                     }`}
                   >
                     {isUpdating ? (
@@ -608,11 +608,11 @@ function UserProfile() {
   // Check if user has access to this page
   if (userData.role !== 'user' && userData.role !== 'patient') {
     return (
-      <section className="bg-gradient-to-br from-purple-50 via-white to-indigo-50 flex justify-center items-center min-h-screen">
-        <div className="h-[80%] w-[80%] bg-white shadow-xl shadow-purple-200 p-2 flex justify-center items-center rounded-xl border border-purple-100">
+      <section className="bg-white flex justify-center items-center min-h-screen">
+        <div className="h-[80%] w-[80%] bg-white shadow-xl p-2 flex justify-center items-center rounded-xl border border-navy-100">
           <div className="text-center">
             <p className="text-xl text-red-600 mb-4 font-semibold">Access Denied</p>
-            <p className="text-lg text-purple-600">This page is only accessible to patients.</p>
+            <p className="text-lg text-navy-700">This page is only accessible to patients.</p>
           </div>
         </div>
       </section>
@@ -620,16 +620,16 @@ function UserProfile() {
   }
 
   return (
-    <section className="bg-gradient-to-br from-purple-50 via-white to-indigo-50 flex justify-center items-center min-h-screen">
-      <div className="h-[80%] w-[90%] max-w-6xl bg-white shadow-xl p-2 flex overflow-hidden rounded-xl border border-purple-100">
+    <section className="bg-white flex justify-center items-center min-h-screen pt-20 pb-8">
+      <div className="w-[95%] max-w-6xl bg-white shadow-xl flex flex-col md:flex-row overflow-hidden rounded-xl border border-navy-100 min-h-[80vh]">
         <UserSidebar profiePic={profiePic} userName={userData?.userName || userData?.name || "Patient"} />
-        <div className="w-[70%] ms-4 md:ms-24 p-2 md:p-4 flex flex-col overflow-y-auto">
+        <div className="w-full md:w-[75%] p-4 md:p-6 flex flex-col overflow-y-auto">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
-            <h1 className="font-bold text-2xl md:text-3xl bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Patient Profile</h1>
+            <h1 className="font-bold text-2xl md:text-3xl text-navy-700">Patient Profile</h1>
             {!isEditing && (
               <button
                 onClick={handleEdit}
-                className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-all duration-200"
+                className="bg-navy-700 hover:bg-navy-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition-all duration-200"
               >
                 Edit Profile
               </button>
@@ -743,7 +743,7 @@ function UserProfile() {
                       type="text"
                       value={emergencyName}
                       onChange={(e) => setEmergencyName(e.target.value)}
-                      className="flex h-10 w-full rounded-md border border-purple-300 bg-transparent px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                      className="flex h-10 w-full rounded-lg border border-navy-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-navy-500 transition-all duration-200"
                       placeholder="Full Name"
                     />
                   </div>
@@ -752,7 +752,7 @@ function UserProfile() {
                     <select
                       value={emergencyRelationship}
                       onChange={(e) => setEmergencyRelationship(e.target.value)}
-                      className="flex h-10 w-full rounded-md border border-purple-300 bg-transparent px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                      className="flex h-10 w-full rounded-lg border border-navy-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-navy-500 transition-all duration-200"
                     >
                       <option value="">Select Relationship</option>
                       <option value="spouse">Spouse</option>
@@ -771,7 +771,7 @@ function UserProfile() {
                       type="text"
                       value={emergencyPhone}
                       onChange={(e) => setEmergencyPhone(e.target.value)}
-                      className="flex h-10 w-full rounded-md border border-purple-300 bg-transparent px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                      className="flex h-10 w-full rounded-lg border border-navy-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-navy-500 transition-all duration-200"
                       placeholder="Phone Number"
                     />
                   </div>
@@ -792,7 +792,7 @@ function UserProfile() {
                   className={`font-bold py-2 px-4 rounded-lg shadow-lg transition-all duration-200 ${
                     isUpdating 
                       ? 'bg-gray-400 cursor-not-allowed text-gray-200' 
-                      : 'bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white'
+                      : 'bg-navy-700 hover:bg-navy-600 text-white font-semibold'
                   }`}
                 >
                   {isUpdating ? (
@@ -812,8 +812,8 @@ function UserProfile() {
           ) : (
             // View Mode
             <div className="space-y-6">
-              <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg border border-purple-200">
-                <h2 className="text-xl font-semibold mb-4 text-purple-800">Personal Information</h2>
+              <div className="bg-navy-50/50 p-6 rounded-lg border border-navy-100">
+                <h2 className="text-xl font-bold mb-4 text-navy-800">Personal Information</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="text-sm font-medium text-gray-600">Full Name</label>
@@ -838,8 +838,8 @@ function UserProfile() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 rounded-lg border border-indigo-200">
-                <h2 className="text-xl font-semibold mb-4 text-indigo-800">Address Information</h2>
+              <div className="bg-navy-50/50 p-6 rounded-lg border border-navy-100">
+                <h2 className="text-xl font-bold mb-4 text-navy-800">Address Information</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="text-sm font-medium text-gray-600">Street Address</label>

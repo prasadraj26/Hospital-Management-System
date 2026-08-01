@@ -255,13 +255,13 @@ function GamificationDashboard() {
     switch (rarity) {
       case 'common': return 'text-gray-600 bg-gray-100';
       case 'uncommon': return 'text-green-600 bg-green-100';
-      case 'rare': return 'text-blue-600 bg-blue-100';
-      case 'epic': return 'text-purple-600 bg-purple-100';
+      case 'rare': return 'text-navy-700 bg-navy-100';
+      case 'epic': return 'text-navy-800 bg-navy-100';
       case 'legendary': return 'text-yellow-600 bg-yellow-100';
       case 'bronze': return 'text-orange-600 bg-orange-100';
       case 'silver': return 'text-gray-600 bg-gray-100';
       case 'gold': return 'text-yellow-600 bg-yellow-100';
-      case 'platinum': return 'text-indigo-600 bg-indigo-100';
+      case 'platinum': return 'text-navy-800 bg-navy-100';
       case 'diamond': return 'text-cyan-600 bg-cyan-100';
       default: return 'text-gray-600 bg-gray-100';
     }
@@ -295,21 +295,21 @@ function GamificationDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100 p-6">
+    <div className="min-h-screen bg-white p-6">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="bg-white rounded-xl shadow-2xl overflow-hidden mb-6">
-          <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-6">
+        <div className="bg-white rounded-xl shadow-md border border-navy-100 overflow-hidden mb-6">
+          <div className="bg-navy-700 text-white p-6">
             <h1 className="text-3xl font-bold mb-2">🎮 Gamification Dashboard</h1>
-            <p className="text-purple-100">Level up your health journey with fun challenges!</p>
+            <p className="text-navy-100">Level up your health journey with fun challenges!</p>
           </div>
         </div>
 
         {/* Player Stats */}
-        <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
+        <div className="bg-white rounded-xl shadow-md border border-navy-100 p-6 mb-6">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center space-x-4">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full flex items-center justify-center text-2xl font-bold text-white">
+              <div className="w-16 h-16 bg-navy-700 rounded-full flex items-center justify-center text-2xl font-bold text-white shadow-md">
                 {patientData.level}
               </div>
               <div>
@@ -318,7 +318,7 @@ function GamificationDashboard() {
               </div>
             </div>
             <div className="text-right">
-              <div className="text-2xl font-bold text-purple-600">{patientData.currentStreak} days</div>
+              <div className="text-2xl font-bold text-navy-700">{patientData.currentStreak} days</div>
               <div className="text-sm text-gray-600">Current Streak</div>
             </div>
           </div>
@@ -328,9 +328,9 @@ function GamificationDashboard() {
               <span>Progress to Level {patientData.level + 1}</span>
               <span>{Math.round(calculateLevelProgress())}%</span>
             </div>
-            <div className="w-full bg-gray-200 rounded-full h-3">
+            <div className="w-full bg-navy-100 rounded-full h-3">
               <div 
-                className="bg-gradient-to-r from-purple-500 to-indigo-500 h-3 rounded-full transition-all duration-300"
+                className="bg-navy-700 h-3 rounded-full transition-all duration-300"
                 style={{ width: `${calculateLevelProgress()}%` }}
               ></div>
             </div>
@@ -338,16 +338,16 @@ function GamificationDashboard() {
         </div>
 
         {/* Tabs */}
-        <div className="bg-white rounded-xl shadow-lg mb-6">
-          <div className="flex border-b border-gray-200">
+        <div className="bg-white rounded-xl shadow-lg mb-6 border border-navy-100">
+          <div className="flex border-b border-navy-100 overflow-x-auto">
             {['overview', 'achievements', 'badges', 'quests', 'leaderboard'].map(tab => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`px-6 py-3 font-medium text-sm capitalize transition-colors ${
+                className={`px-6 py-3 font-medium text-sm capitalize transition-colors whitespace-nowrap ${
                   activeTab === tab
-                    ? 'text-purple-600 border-b-2 border-purple-600'
-                    : 'text-gray-600 hover:text-gray-800'
+                    ? 'text-navy-700 border-b-2 border-navy-700 bg-navy-50/50'
+                    : 'text-gray-600 hover:text-navy-700'
                 }`}
               >
                 {tab}
@@ -360,21 +360,21 @@ function GamificationDashboard() {
             {activeTab === 'overview' && (
               <div className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                  <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-blue-600">{patientData.statistics.totalAppointments}</div>
-                    <div className="text-sm text-blue-800">Total Appointments</div>
+                  <div className="bg-navy-50/60 p-4 rounded-lg border border-navy-100">
+                    <div className="text-2xl font-bold text-navy-700">{patientData.statistics.totalAppointments}</div>
+                    <div className="text-sm text-navy-800 font-medium">Total Appointments</div>
                   </div>
-                  <div className="bg-gradient-to-r from-green-50 to-green-100 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-green-600">{patientData.statistics.medicationAdherence}%</div>
-                    <div className="text-sm text-green-800">Medication Adherence</div>
+                  <div className="bg-navy-50/60 p-4 rounded-lg border border-navy-100">
+                    <div className="text-2xl font-bold text-navy-700">{patientData.statistics.medicationAdherence}%</div>
+                    <div className="text-sm text-navy-800 font-medium">Medication Adherence</div>
                   </div>
-                  <div className="bg-gradient-to-r from-purple-50 to-purple-100 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-purple-600">{patientData.statistics.exerciseDays}</div>
-                    <div className="text-sm text-purple-800">Exercise Days</div>
+                  <div className="bg-navy-50/60 p-4 rounded-lg border border-navy-100">
+                    <div className="text-2xl font-bold text-navy-700">{patientData.statistics.exerciseDays}</div>
+                    <div className="text-sm text-navy-800 font-medium">Exercise Days</div>
                   </div>
-                  <div className="bg-gradient-to-r from-orange-50 to-orange-100 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-orange-600">{patientData.statistics.healthyMeals}</div>
-                    <div className="text-sm text-orange-800">Healthy Meals</div>
+                  <div className="bg-navy-50/60 p-4 rounded-lg border border-navy-100">
+                    <div className="text-2xl font-bold text-navy-700">{patientData.statistics.healthyMeals}</div>
+                    <div className="text-sm text-navy-800 font-medium">Healthy Meals</div>
                   </div>
                 </div>
 
@@ -438,7 +438,7 @@ function GamificationDashboard() {
                           </div>
                           <p className="text-sm text-gray-600 mt-1">{achievement.description}</p>
                           <div className="flex items-center justify-between mt-2">
-                            <span className="text-sm font-medium text-purple-600">{achievement.points} pts</span>
+                            <span className="text-sm font-medium text-navy-700">{achievement.points} pts</span>
                             {earned && (
                               <span className="text-green-600 text-sm font-medium">✓ Earned</span>
                             )}
@@ -528,13 +528,13 @@ function GamificationDashboard() {
                           </div>
                           
                           <div className="flex items-center justify-between mt-3">
-                            <div className="text-sm text-purple-600 font-medium">
+                            <div className="text-sm text-navy-700 font-medium">
                               Reward: {quest.rewards.points} pts
                             </div>
                             {!completed && !active && (
                               <button
                                 onClick={() => startQuest(quest)}
-                                className="px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-200"
+                                className="px-4 py-2 bg-navy-700 text-white text-sm font-medium rounded-lg hover:bg-navy-600 transition-all duration-200 shadow-md"
                               >
                                 Start Quest
                               </button>
@@ -562,7 +562,7 @@ function GamificationDashboard() {
                       key={index}
                       className={`p-4 rounded-lg border-2 transition-all duration-200 ${
                         player.patientName === 'You' 
-                          ? 'border-purple-300 bg-purple-50' 
+                          ? 'border-navy-300 bg-navy-50' 
                           : 'border-gray-200 bg-white'
                       }`}
                     >
@@ -575,7 +575,7 @@ function GamificationDashboard() {
                           </div>
                         </div>
                         <div className="text-right">
-                          <div className="text-lg font-bold text-purple-600">{player.score.toLocaleString()}</div>
+                          <div className="text-lg font-bold text-navy-700">{player.score.toLocaleString()}</div>
                           <div className="text-sm text-gray-600">points</div>
                         </div>
                       </div>
@@ -611,7 +611,7 @@ function GamificationDashboard() {
                       <div className="flex items-center space-x-2">
                         <div className="w-24 bg-gray-200 rounded-full h-2">
                           <div 
-                            className="bg-blue-500 h-2 rounded-full"
+                            className="bg-navy-700 h-2 rounded-full"
                             style={{ width: `${(objective.current / objective.target) * 100}%` }}
                           ></div>
                         </div>
@@ -632,7 +632,7 @@ function GamificationDashboard() {
                   </button>
                   <button
                     onClick={() => completeQuest(selectedQuest.questId)}
-                    className="px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-200"
+                    className="px-4 py-2 bg-navy-700 text-white rounded-lg hover:bg-navy-600 transition-all duration-200 shadow-md"
                   >
                     Complete Quest
                   </button>

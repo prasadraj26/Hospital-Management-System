@@ -8,9 +8,9 @@ import docProfile from "../../../assets/doct2.jpg";
 const DoctorSidebar = ({ profilePic, userName }) => {
   const navLinkStyle = ({ isActive }) => {
     return {
-      fontWeight: isActive ? "600" : "400",
-      color: isActive ? "white" : "rgb(71,119,181)",
-      backgroundColor: isActive ? "rgb(71,119,181)" : "transparent",
+      fontWeight: isActive ? "600" : "500",
+      color: isActive ? "white" : "#0B2A4A",
+      backgroundColor: isActive ? "#0B2A4A" : "transparent",
     };
   };
 
@@ -28,25 +28,27 @@ const DoctorSidebar = ({ profilePic, userName }) => {
   };
 
   return (
-    <div className='bg-gradient-to-b from-[rgb(71,119,181)]/10 to-[rgb(71,119,181)]/20 h-full w-[18%] flex flex-col justify-between p-2 border-r border-[rgb(71,119,181)]'>
+    <div className='bg-navy-50/60 w-full md:w-[240px] md:min-w-[200px] flex flex-col justify-between p-4 border-b md:border-b-0 md:border-r border-navy-100 shrink-0'>
       
-    <div className='flex flex-col gap-16'>
-        <div className='w-full flex flex-col items-center gap-3'>
-            <img src={docProfile} className='size-24 rounded-full border-2 border-[rgb(71,119,181)] shadow-lg' alt="profile" />
-            <p className='text-[rgb(71,119,181)] font-medium'>{userName}</p>
+    <div className='flex flex-col gap-4 md:gap-8'>
+        <div className='w-full flex flex-row md:flex-col items-center justify-between md:justify-center gap-3 pt-1 md:pt-4'>
+            <div className="flex items-center gap-3">
+              <img src={docProfile} className='size-12 md:size-20 rounded-full border-2 border-navy-200 shadow-md object-cover' alt="profile" />
+              <p className='text-navy-800 font-bold text-center text-base md:text-lg'>{userName}</p>
+            </div>
         </div>
 
-        <div className='flex flex-col items-start w-full gap-4 '>
-            <NavLink style={navLinkStyle} className={'w-full p-2 h-[40px]'} to="/doctor-profile">Settings</NavLink>
-            <NavLink style={navLinkStyle} className={'w-full p-2 h-[40px]'} to="/doctor-appointments">Appointments</NavLink>
-            <NavLink style={navLinkStyle} className={'w-full p-2 h-[40px]'} to="/doctor-review">Message</NavLink>
+        <div className='flex flex-row md:flex-col items-center md:items-start w-full gap-2 overflow-x-auto md:overflow-x-visible pb-2 md:pb-0 scrollbar-none'>
+            <NavLink style={navLinkStyle} className={'whitespace-nowrap px-3 md:px-4 py-2 md:py-2.5 rounded-lg transition-all duration-200 text-xs md:text-sm'} to="/doctor-profile">Settings</NavLink>
+            <NavLink style={navLinkStyle} className={'whitespace-nowrap px-3 md:px-4 py-2 md:py-2.5 rounded-lg transition-all duration-200 text-xs md:text-sm'} to="/doctor-appointments">Appointments</NavLink>
+            <NavLink style={navLinkStyle} className={'whitespace-nowrap px-3 md:px-4 py-2 md:py-2.5 rounded-lg transition-all duration-200 text-xs md:text-sm'} to="/doctor-review">Messages</NavLink>
         </div>
     </div>
 
-    <div className='w-full text-center h-[80px] p-2'>
+    <div className='w-full text-center pt-2 md:pb-4'>
         <button 
           onClick={handleSignOut} 
-          className='bg-[rgb(71,119,181)] text-white rounded-full text-md font-medium p-2 cursor-pointer hover:bg-[rgb(60,100,160)] hover:scale-110 duration-200 active:scale-90 shadow-lg'>
+          className='w-full bg-navy-700 text-white rounded-lg text-xs md:text-sm font-semibold py-2 md:py-2.5 px-4 cursor-pointer hover:bg-navy-600 transition-all duration-200 shadow-md'>
           Sign Out
         </button>
     </div>

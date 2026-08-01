@@ -1,5 +1,5 @@
 html{
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   scroll-behavior: smooth;
   overflow-y: auto;
   scrollbar-width: none;
@@ -15,42 +15,43 @@ html{
 }
 
 body {
-  background: linear-gradient(135deg, #faf5ff 0%, #ffffff 50%, #e0e7ff 100%);
+  background: #ffffff;
   min-height: 100vh;
 }
 
 section{
-  height: 100vh;
-  scroll-snap-align: center;
+  min-height: 100vh;
+  height: auto;
+  scroll-snap-align: start;
 }
 
-/* Purple Theme Custom Styles */
-.purple-gradient {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+/* Navy Theme Custom Styles */
+.navy-gradient {
+  background: linear-gradient(135deg, #0B2A4A 0%, #14395E 100%);
 }
 
-.purple-gradient-dark {
-  background: linear-gradient(135deg, #5a67d8 0%, #667eea 100%);
+.navy-gradient-dark {
+  background: linear-gradient(135deg, #081F38 0%, #0B2A4A 100%);
 }
 
-.purple-shadow {
-  box-shadow: 0 10px 25px rgba(147, 51, 234, 0.15);
+.navy-shadow {
+  box-shadow: 0 10px 25px rgba(11, 42, 74, 0.12);
 }
 
-.purple-glow {
-  box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
+.navy-glow {
+  box-shadow: 0 0 20px rgba(11, 42, 74, 0.25);
 }
 
-/* Animation for purple theme elements */
-@keyframes purplePulse {
+/* Animation for navy theme elements */
+@keyframes navyPulse {
   0%, 100% {
-    box-shadow: 0 0 0 0 rgba(147, 51, 234, 0.4);
+    box-shadow: 0 0 0 0 rgba(11, 42, 74, 0.3);
   }
   50% {
-    box-shadow: 0 0 0 10px rgba(147, 51, 234, 0);
+    box-shadow: 0 0 0 10px rgba(11, 42, 74, 0);
   }
 }
 
-.purple-pulse {
-  animation: purplePulse 2s infinite;
+.navy-pulse {
+  animation: navyPulse 2s infinite;
 }

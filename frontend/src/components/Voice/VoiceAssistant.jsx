@@ -206,7 +206,7 @@ function VoiceAssistant() {
       case 'emergency_call': return 'text-red-600 bg-red-100';
       case 'nurse_call': return 'text-blue-600 bg-blue-100';
       case 'doctor_call': return 'text-green-600 bg-green-100';
-      case 'schedule_appointment': return 'text-purple-600 bg-purple-100';
+      case 'schedule_appointment': return 'text-navy-700 bg-navy-100';
       case 'check_medication': return 'text-orange-600 bg-orange-100';
       default: return 'text-gray-600 bg-gray-100';
     }
@@ -216,16 +216,16 @@ function VoiceAssistant() {
     <div className="min-h-screen bg-white p-6">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
-        <div className="bg-white rounded-xl shadow-2xl overflow-hidden mb-6">
-          <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-6">
+        <div className="bg-white rounded-xl shadow-md border border-navy-100 overflow-hidden mb-6">
+          <div className="bg-navy-700 text-white p-6">
             <div className="flex justify-between items-center">
               <div>
                 <h1 className="text-3xl font-bold mb-2">🎤 Voice-Controlled Medical Assistant</h1>
-                <p className="text-purple-100">Natural language processing for medical commands</p>
+                <p className="text-navy-100">Natural language processing for medical commands</p>
               </div>
               <button
                 onClick={() => setShowSettings(true)}
-                className="p-2 bg-white bg-opacity-20 rounded-lg hover:bg-opacity-30 transition-colors"
+                className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
               >
                 ⚙️
               </button>
@@ -234,15 +234,15 @@ function VoiceAssistant() {
         </div>
 
         {/* Voice Controls */}
-        <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
+        <div className="bg-white rounded-xl shadow-md border border-navy-100 p-6 mb-6">
           <div className="text-center">
             <div className="mb-6">
-              <div className={`w-32 h-32 mx-auto rounded-full flex items-center justify-center text-6xl transition-all duration-300 ${
+              <div className={`w-32 h-32 mx-auto rounded-full flex items-center justify-center text-6xl shadow-md transition-all duration-300 ${
                 isListening 
                   ? 'bg-red-500 text-white animate-pulse' 
                   : isProcessing 
                     ? 'bg-yellow-500 text-white animate-spin' 
-                    : 'bg-gradient-to-r from-purple-500 to-indigo-500 text-white hover:from-purple-600 hover:to-indigo-600'
+                    : 'bg-navy-700 text-white hover:bg-navy-600'
               }`}>
                 {isListening ? '🎤' : isProcessing ? '⏳' : '🤖'}
               </div>
@@ -301,7 +301,7 @@ function VoiceAssistant() {
                   <div
                     className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
                       message.type === 'user'
-                        ? 'bg-gradient-to-r from-purple-500 to-indigo-500 text-white'
+                        ? 'bg-navy-700 text-white'
                         : message.isError
                           ? 'bg-red-100 text-red-800'
                           : 'bg-gray-100 text-gray-800'
@@ -380,7 +380,7 @@ function VoiceAssistant() {
                     <select
                       value={assistantSettings.voice}
                       onChange={(e) => setAssistantSettings({...assistantSettings, voice: e.target.value})}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                     >
                       <option value="female">Female</option>
                       <option value="male">Male</option>
@@ -437,7 +437,7 @@ function VoiceAssistant() {
                     <select
                       value={assistantSettings.language}
                       onChange={(e) => setAssistantSettings({...assistantSettings, language: e.target.value})}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                     >
                       <option value="en-US">English (US)</option>
                       <option value="en-GB">English (UK)</option>
@@ -462,7 +462,7 @@ function VoiceAssistant() {
                         recognitionRef.current.lang = assistantSettings.language;
                       }
                     }}
-                    className="px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-200"
+                    className="px-4 py-2 bg-navy-700 hover:bg-navy-600 text-white font-semibold rounded-lg shadow-md transition-all duration-200"
                   >
                     Save Settings
                   </button>

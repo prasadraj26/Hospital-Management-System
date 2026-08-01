@@ -123,7 +123,7 @@ function AITriageSystem() {
                         type="number"
                         value={triageData.age}
                         onChange={(e) => setTriageData({...triageData, age: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                         placeholder="Enter age"
                       />
                     </div>
@@ -132,7 +132,7 @@ function AITriageSystem() {
                       <select
                         value={triageData.gender}
                         onChange={(e) => setTriageData({...triageData, gender: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                       >
                         <option value="">Select Gender</option>
                         <option value="male">Male</option>
@@ -146,7 +146,7 @@ function AITriageSystem() {
                         type="text"
                         value={triageData.chiefComplaint}
                         onChange={(e) => setTriageData({...triageData, chiefComplaint: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                         placeholder="Main complaint"
                       />
                     </div>
@@ -162,7 +162,7 @@ function AITriageSystem() {
                     <select
                       value={currentSymptom}
                       onChange={(e) => setCurrentSymptom(e.target.value)}
-                      className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      className="flex-1 px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                     >
                       <option value="">Select a symptom</option>
                       {symptomOptions.map(symptom => (
@@ -171,7 +171,7 @@ function AITriageSystem() {
                     </select>
                     <button
                       onClick={addSymptom}
-                      className="px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors"
+                      className="px-4 py-2 bg-navy-700 text-white rounded-lg hover:bg-navy-600 transition-colors shadow-md"
                     >
                       Add Symptom
                     </button>
@@ -254,7 +254,7 @@ function AITriageSystem() {
                               }
                             }
                           })}
-                          className="w-1/2 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                          className="w-1/2 px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                         />
                         <input
                           type="number"
@@ -270,7 +270,7 @@ function AITriageSystem() {
                               }
                             }
                           })}
-                          className="w-1/2 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                          className="w-1/2 px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                         />
                       </div>
                     </div>
@@ -284,7 +284,7 @@ function AITriageSystem() {
                           ...triageData,
                           vitalSigns: { ...triageData.vitalSigns, heartRate: e.target.value }
                         })}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                         placeholder="e.g., 72"
                       />
                     </div>
@@ -299,7 +299,7 @@ function AITriageSystem() {
                           ...triageData,
                           vitalSigns: { ...triageData.vitalSigns, temperature: e.target.value }
                         })}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                         placeholder="e.g., 98.6"
                       />
                     </div>
@@ -313,7 +313,7 @@ function AITriageSystem() {
                           ...triageData,
                           vitalSigns: { ...triageData.vitalSigns, respiratoryRate: e.target.value }
                         })}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                         placeholder="e.g., 16"
                       />
                     </div>
@@ -327,7 +327,7 @@ function AITriageSystem() {
                           ...triageData,
                           vitalSigns: { ...triageData.vitalSigns, oxygenSaturation: e.target.value }
                         })}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                         placeholder="e.g., 98"
                       />
                     </div>
@@ -362,7 +362,7 @@ function AITriageSystem() {
                           ...triageData,
                           currentMedications: e.target.value.split(',').map(m => m.trim()).filter(m => m)
                         })}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                         rows="3"
                         placeholder="List current medications separated by commas"
                       />
@@ -375,7 +375,7 @@ function AITriageSystem() {
                           ...triageData,
                           allergies: e.target.value.split(',').map(a => a.trim()).filter(a => a)
                         })}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full px-3 py-2 border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500"
                         rows="3"
                         placeholder="List allergies separated by commas"
                       />
@@ -388,15 +388,18 @@ function AITriageSystem() {
                   <button
                     onClick={analyzeSymptoms}
                     disabled={loading}
-                    className="px-8 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-8 py-3 bg-navy-700 hover:bg-navy-600 text-white font-semibold rounded-lg transition-all duration-200 shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {loading ? (
                       <div className="flex items-center">
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                        Analyzing...
+                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Analyzing Symptoms...
                       </div>
                     ) : (
-                      '🤖 Analyze with AI'
+                      'Analyze Symptoms'
                     )}
                   </button>
                 </div>
@@ -416,7 +419,7 @@ function AITriageSystem() {
 
                 {/* Priority and Triage Category */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg border border-blue-200">
+                  <div className="bg-navy-50/60 p-6 rounded-lg border border-navy-100">
                     <h3 className="text-lg font-semibold text-gray-800 mb-3">Priority Assessment</h3>
                     <div className="space-y-3">
                       <div className="flex justify-between items-center">
@@ -436,7 +439,7 @@ function AITriageSystem() {
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg border border-purple-200">
+                  <div className="bg-navy-50/60 p-6 rounded-lg border border-navy-100">
                     <h3 className="text-lg font-semibold text-gray-800 mb-3">Triage Category</h3>
                     <div className="text-center">
                       <div className={`w-20 h-20 rounded-full mx-auto mb-3 flex items-center justify-center ${getTriageCategoryColor(aiAnalysis.triageCategory)}`}>

@@ -98,7 +98,7 @@ function PurpleThemeDashboard() {
 
   const getStatusColor = (status) => {
     switch (status) {
-      case 'operational': return 'text-purple-600';
+      case 'operational': return 'text-navy-700';
       case 'warning': return 'text-yellow-600';
       case 'error': return 'text-red-600';
       default: return 'text-gray-600';
@@ -107,7 +107,7 @@ function PurpleThemeDashboard() {
 
   const getStatusBgColor = (status) => {
     switch (status) {
-      case 'operational': return 'bg-purple-100';
+      case 'operational': return 'bg-navy-100';
       case 'warning': return 'bg-yellow-100';
       case 'error': return 'bg-red-100';
       default: return 'bg-gray-100';
@@ -119,16 +119,16 @@ function PurpleThemeDashboard() {
       case 'high': return 'bg-red-100 text-red-800 border-red-200';
       case 'medium': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
       case 'low': return 'bg-green-100 text-green-800 border-green-200';
-      default: return 'bg-purple-100 text-purple-800 border-purple-200';
+      default: return 'bg-navy-100 text-navy-800 border-navy-200';
     }
   };
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-screen bg-gradient-to-br from-purple-50 to-indigo-100">
+      <div className="flex justify-center items-center h-screen bg-white">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-purple-600 mx-auto mb-4"></div>
-          <p className="text-purple-600 text-lg font-medium">Loading AI-Powered Dashboard...</p>
+          <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-navy-700 mx-auto mb-4"></div>
+          <p className="text-navy-700 text-lg font-medium">Loading AI-Powered Dashboard...</p>
         </div>
       </div>
     );
@@ -203,31 +203,31 @@ function PurpleThemeDashboard() {
         <div className="mb-8">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+              <h1 className="text-4xl font-bold text-navy-700">
                 AI-Powered Hospital Dashboard
               </h1>
-              <p className="text-purple-600 mt-2 text-lg">
+              <p className="text-navy-600 mt-2 text-lg">
                 Welcome back, {currentUser?.name || 'User'}! Here's your intelligent hospital overview.
               </p>
             </div>
-            <div className="flex items-center space-x-2 bg-white rounded-lg px-4 py-2 shadow-lg">
-              <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium text-gray-700">AI Active</span>
+            <div className="flex items-center space-x-2 bg-white rounded-lg px-4 py-2 border border-navy-100 shadow-md">
+              <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+              <span className="text-sm font-medium text-navy-800">AI Active</span>
             </div>
           </div>
         </div>
 
         {/* AI Insights Panel */}
-        <div className="mb-6 bg-white rounded-xl shadow-lg border border-purple-100">
+        <div className="mb-6 bg-white rounded-xl shadow-md border border-navy-100">
           <div className="p-6">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-xl font-bold text-purple-800 flex items-center">
-                <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <h2 className="text-xl font-bold text-navy-700 flex items-center">
+                <svg className="w-6 h-6 mr-2 text-navy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
                 AI Insights & Recommendations
               </h2>
-              <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">
+              <span className="px-3 py-1 bg-navy-100 text-navy-800 rounded-full text-sm font-medium">
                 {aiInsights.length} Active
               </span>
             </div>
@@ -252,7 +252,7 @@ function PurpleThemeDashboard() {
 
         {/* Real-time Status */}
         {realtimeMetrics && (
-          <div className="mb-6 p-6 bg-white rounded-xl shadow-lg border border-purple-100">
+          <div className="mb-6 p-6 bg-white rounded-xl shadow-lg border border-navy-100">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-4">
                 <div className={`px-4 py-2 rounded-full ${getStatusBgColor(realtimeMetrics.systemStatus)}`}>
@@ -260,12 +260,12 @@ function PurpleThemeDashboard() {
                     System {realtimeMetrics.systemStatus}
                   </span>
                 </div>
-                <span className="text-sm text-purple-600">
+                <span className="text-sm text-navy-600">
                   Last updated: {new Date(realtimeMetrics.currentTime).toLocaleTimeString()}
                 </span>
               </div>
               <div className="flex space-x-6 text-sm">
-                <span className="text-purple-600 font-medium">
+                <span className="text-navy-700 font-medium">
                   Active: {realtimeMetrics.activeAppointments}
                 </span>
                 <span className="text-yellow-600 font-medium">
@@ -281,15 +281,15 @@ function PurpleThemeDashboard() {
 
         {/* Navigation Tabs */}
         <div className="mb-6">
-          <nav className="flex space-x-8 bg-white rounded-lg p-1 shadow-lg">
+          <nav className="flex space-x-8 bg-white rounded-lg p-1 border border-navy-100 shadow-md">
             {['overview', 'analytics', 'ai-insights', 'predictions'].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`py-3 px-6 rounded-md font-medium text-sm transition-all duration-200 ${
+                className={`px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 capitalize ${
                   activeTab === tab
-                    ? 'bg-purple-600 text-white shadow-lg'
-                    : 'text-purple-600 hover:bg-purple-50'
+                    ? 'bg-navy-700 text-white shadow-md'
+                    : 'text-navy-700 hover:bg-navy-100'
                 }`}
               >
                 {tab.charAt(0).toUpperCase() + tab.slice(1).replace('-', ' ')}
@@ -303,15 +303,15 @@ function PurpleThemeDashboard() {
           <div className="space-y-6">
             {/* Key Metrics Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-6 rounded-xl shadow-lg text-white">
+              <div className="bg-navy-700 p-6 rounded-xl shadow-md text-white">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-purple-100 text-sm font-medium">Total Patients</p>
+                    <p className="text-navy-100 text-sm font-medium">Total Patients</p>
                     <p className="text-3xl font-bold mt-1">
                       {analytics?.overview?.totalPatients || 0}
                     </p>
                   </div>
-                  <div className="p-3 bg-white bg-opacity-20 rounded-lg">
+                  <div className="p-3 bg-white/10 rounded-lg">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
@@ -319,15 +319,15 @@ function PurpleThemeDashboard() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-indigo-500 to-indigo-600 p-6 rounded-xl shadow-lg text-white">
+              <div className="bg-navy-800 p-6 rounded-xl shadow-md text-white">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-indigo-100 text-sm font-medium">Total Appointments</p>
+                    <p className="text-navy-100 text-sm font-medium">Total Appointments</p>
                     <p className="text-3xl font-bold mt-1">
                       {analytics?.overview?.totalAppointments || 0}
                     </p>
                   </div>
-                  <div className="p-3 bg-white bg-opacity-20 rounded-lg">
+                  <div className="p-3 bg-white/10 rounded-lg">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-6 4h3m-2-5h3" />
                     </svg>
@@ -335,15 +335,15 @@ function PurpleThemeDashboard() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-violet-500 to-violet-600 p-6 rounded-xl shadow-lg text-white">
+              <div className="bg-navy-600 p-6 rounded-xl shadow-md text-white">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-violet-100 text-sm font-medium">Revenue</p>
+                    <p className="text-navy-100 text-sm font-medium">Revenue</p>
                     <p className="text-3xl font-bold mt-1">
                       ${analytics?.overview?.totalRevenue || 0}
                     </p>
                   </div>
-                  <div className="p-3 bg-white bg-opacity-20 rounded-lg">
+                  <div className="p-3 bg-white/10 rounded-lg">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                     </svg>
@@ -351,15 +351,15 @@ function PurpleThemeDashboard() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-fuchsia-500 to-fuchsia-600 p-6 rounded-xl shadow-lg text-white">
+              <div className="bg-navy-900 p-6 rounded-xl shadow-md text-white">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-fuchsia-100 text-sm font-medium">Emergency Cases</p>
+                    <p className="text-navy-100 text-sm font-medium">Emergency Cases</p>
                     <p className="text-3xl font-bold mt-1">
                       {analytics?.overview?.emergencyCases || 0}
                     </p>
                   </div>
-                  <div className="p-3 bg-white bg-opacity-20 rounded-lg">
+                  <div className="p-3 bg-white/10 rounded-lg">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
@@ -370,8 +370,8 @@ function PurpleThemeDashboard() {
 
             {/* Charts Row */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-purple-100">
-                <h3 className="text-lg font-bold text-purple-800 mb-4">Appointment Trends</h3>
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-navy-100">
+                <h3 className="text-lg font-bold text-navy-800 mb-4">Appointment Trends</h3>
                 <Line data={appointmentTrendsData} options={{
                   responsive: true,
                   plugins: {
@@ -383,20 +383,20 @@ function PurpleThemeDashboard() {
                     y: {
                       beginAtZero: true,
                       grid: {
-                        color: 'rgba(71, 119, 181, 0.1)'
+                        color: 'rgba(11, 42, 74, 0.1)'
                       }
                     },
                     x: {
                       grid: {
-                        color: 'rgba(71, 119, 181, 0.1)'
+                        color: 'rgba(11, 42, 74, 0.1)'
                       }
                     }
                   }
                 }} />
               </div>
 
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-purple-100">
-                <h3 className="text-lg font-bold text-purple-800 mb-4">Department Distribution</h3>
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-navy-100">
+                <h3 className="text-lg font-bold text-navy-800 mb-4">Department Distribution</h3>
                 <Doughnut data={departmentData} options={{
                   responsive: true,
                   plugins: {
@@ -409,8 +409,8 @@ function PurpleThemeDashboard() {
             </div>
 
             {/* Doctor Performance */}
-            <div className="bg-white p-6 rounded-xl shadow-lg border border-purple-100">
-              <h3 className="text-lg font-bold text-purple-800 mb-4">Doctor Performance</h3>
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-navy-100">
+              <h3 className="text-lg font-bold text-navy-800 mb-4">Doctor Performance</h3>
               <Bar data={doctorPerformanceData} options={{
                 responsive: true,
                 plugins: {
@@ -440,33 +440,33 @@ function PurpleThemeDashboard() {
         {activeTab === 'ai-insights' && (
           <div className="space-y-6">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-purple-100">
-                <h3 className="text-lg font-bold text-purple-800 mb-4">Patient Satisfaction</h3>
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-navy-100">
+                <h3 className="text-lg font-bold text-navy-800 mb-4">Patient Satisfaction</h3>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-purple-600 mb-2">
+                  <div className="text-4xl font-bold text-navy-700 mb-2">
                     {analytics?.patientSatisfaction || 0}/5
                   </div>
-                  <p className="text-purple-600">AI-Predicted Rating</p>
+                  <p className="text-navy-600">AI-Predicted Rating</p>
                 </div>
               </div>
 
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-purple-100">
-                <h3 className="text-lg font-bold text-purple-800 mb-4">Average Wait Time</h3>
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-navy-100">
+                <h3 className="text-lg font-bold text-navy-800 mb-4">Average Wait Time</h3>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-indigo-600 mb-2">
+                  <div className="text-4xl font-bold text-navy-700 mb-2">
                     {analytics?.averageWaitTime || 0} min
                   </div>
-                  <p className="text-purple-600">AI-Optimized</p>
+                  <p className="text-navy-600">AI-Optimized</p>
                 </div>
               </div>
 
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-purple-100">
-                <h3 className="text-lg font-bold text-purple-800 mb-4">AI Accuracy</h3>
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-navy-100">
+                <h3 className="text-lg font-bold text-navy-800 mb-4">AI Accuracy</h3>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-violet-600 mb-2">
+                  <div className="text-4xl font-bold text-navy-700 mb-2">
                     94.2%
                   </div>
-                  <p className="text-purple-600">Diagnosis Accuracy</p>
+                  <p className="text-navy-600">Diagnosis Accuracy</p>
                 </div>
               </div>
             </div>
@@ -476,28 +476,28 @@ function PurpleThemeDashboard() {
         {/* Predictions Tab */}
         {activeTab === 'predictions' && (
           <div className="space-y-6">
-            <div className="bg-white p-6 rounded-xl shadow-lg border border-purple-100">
-              <h3 className="text-lg font-bold text-purple-800 mb-4">Predictive Analytics</h3>
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-navy-100">
+              <h3 className="text-lg font-bold text-navy-800 mb-4">Predictive Analytics</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div className="p-4 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg border border-purple-200">
-                  <h4 className="font-semibold text-purple-800">Readmission Risk</h4>
-                  <p className="text-2xl font-bold text-purple-600 mt-2">12%</p>
-                  <p className="text-sm text-purple-600">↓ 3% from last week</p>
+                <div className="p-4 bg-navy-50/60 rounded-lg border border-navy-100">
+                  <h4 className="font-semibold text-navy-800">Readmission Risk</h4>
+                  <p className="text-2xl font-bold text-navy-700 mt-2">12%</p>
+                  <p className="text-sm text-navy-600">↓ 3% from last week</p>
                 </div>
-                <div className="p-4 bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-lg border border-indigo-200">
-                  <h4 className="font-semibold text-indigo-800">Staff Efficiency</h4>
-                  <p className="text-2xl font-bold text-indigo-600 mt-2">87%</p>
-                  <p className="text-sm text-indigo-600">↑ 5% from last month</p>
+                <div className="p-4 bg-navy-50/60 rounded-lg border border-navy-100">
+                  <h4 className="font-semibold text-navy-800">Staff Efficiency</h4>
+                  <p className="text-2xl font-bold text-navy-700 mt-2">87%</p>
+                  <p className="text-sm text-navy-600">↑ 5% from last month</p>
                 </div>
-                <div className="p-4 bg-gradient-to-br from-violet-50 to-violet-100 rounded-lg border border-violet-200">
-                  <h4 className="font-semibold text-violet-800">Resource Utilization</h4>
-                  <p className="text-2xl font-bold text-violet-600 mt-2">92%</p>
-                  <p className="text-sm text-violet-600">Optimal range</p>
+                <div className="p-4 bg-navy-50/60 rounded-lg border border-navy-100">
+                  <h4 className="font-semibold text-navy-800">Resource Utilization</h4>
+                  <p className="text-2xl font-bold text-navy-700 mt-2">92%</p>
+                  <p className="text-sm text-navy-600">Optimal range</p>
                 </div>
-                <div className="p-4 bg-gradient-to-br from-fuchsia-50 to-fuchsia-100 rounded-lg border border-fuchsia-200">
-                  <h4 className="font-semibold text-fuchsia-800">Cost Optimization</h4>
-                  <p className="text-2xl font-bold text-fuchsia-600 mt-2">15%</p>
-                  <p className="text-sm text-fuchsia-600">Savings potential</p>
+                <div className="p-4 bg-navy-50/60 rounded-lg border border-navy-100">
+                  <h4 className="font-semibold text-navy-800">Cost Optimization</h4>
+                  <p className="text-2xl font-bold text-navy-700 mt-2">15%</p>
+                  <p className="text-sm text-navy-600">Savings potential</p>
                 </div>
               </div>
             </div>
